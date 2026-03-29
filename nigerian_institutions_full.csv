@@ -1,0 +1,496 @@
+university_name,state,geopolitical_zone,type,course,faculty,jamb_cutoff,tuition_min,tuition_max,available,accredited
+University of Lagos,Lagos,South West,Federal University,Computer Science,Sciences,200,60000,80000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Medicine and Surgery,Medical Sciences,280,80000,120000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Law,Law,220,60000,90000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Accounting,Management Sciences,200,60000,80000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Engineering (Electrical),Engineering,220,70000,100000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Mass Communication,Social Sciences,190,55000,75000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Economics,Social Sciences,200,60000,80000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Business Administration,Management Sciences,190,55000,75000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Pharmacy,Pharmacy,260,70000,100000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Nursing Science,Medical Sciences,250,65000,95000,Yes,Yes
+University of Ibadan,Oyo,South West,Federal University,Computer Science,Sciences,220,50000,70000,Yes,Yes
+University of Ibadan,Oyo,South West,Federal University,Medicine and Surgery,Medical Sciences,300,80000,130000,Yes,Yes
+University of Ibadan,Oyo,South West,Federal University,Economics,Social Sciences,200,50000,70000,Yes,Yes
+University of Ibadan,Oyo,South West,Federal University,Pharmacy,Pharmacy,260,70000,100000,Yes,Yes
+University of Ibadan,Oyo,South West,Federal University,Agricultural Science,Agriculture,180,40000,60000,Yes,Yes
+University of Ibadan,Oyo,South West,Federal University,Law,Law,220,50000,75000,Yes,Yes
+University of Ibadan,Oyo,South West,Federal University,Nursing Science,Medical Sciences,250,60000,90000,Yes,Yes
+University of Ibadan,Oyo,South West,Federal University,Mass Communication,Social Sciences,190,45000,65000,Yes,Yes
+University of Ibadan,Oyo,South West,Federal University,Psychology,Social Sciences,200,50000,70000,Yes,Yes
+Obafemi Awolowo University,Osun,South West,Federal University,Computer Science,Sciences,220,50000,75000,Yes,Yes
+Obafemi Awolowo University,Osun,South West,Federal University,Law,Law,230,55000,80000,Yes,Yes
+Obafemi Awolowo University,Osun,South West,Federal University,Architecture,Environmental Sciences,210,60000,85000,Yes,Yes
+Obafemi Awolowo University,Osun,South West,Federal University,Accounting,Management Sciences,200,50000,75000,Yes,Yes
+Obafemi Awolowo University,Osun,South West,Federal University,Medicine and Surgery,Medical Sciences,290,75000,120000,Yes,Yes
+Obafemi Awolowo University,Osun,South West,Federal University,Engineering (Civil),Engineering,210,55000,80000,Yes,Yes
+Obafemi Awolowo University,Osun,South West,Federal University,Economics,Social Sciences,200,50000,75000,Yes,Yes
+Obafemi Awolowo University,Osun,South West,Federal University,Pharmacy,Pharmacy,255,65000,95000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Computer Science,Sciences,200,55000,75000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Medicine and Surgery,Medical Sciences,280,75000,120000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Law,Law,220,55000,80000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Engineering (Civil),Engineering,210,60000,90000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Mass Communication,Social Sciences,190,50000,70000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Pharmacy,Pharmacy,250,65000,95000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Accounting,Management Sciences,195,55000,75000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Agricultural Science,Agriculture,175,45000,65000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Economics,Social Sciences,190,50000,70000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Computer Science,Sciences,180,40000,60000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Medicine and Surgery,Medical Sciences,260,65000,100000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Engineering (Mechanical),Engineering,200,55000,80000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Architecture,Environmental Sciences,190,50000,75000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Agricultural Science,Agriculture,160,35000,55000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Law,Law,200,45000,65000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Economics,Social Sciences,175,40000,60000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Pharmacy,Pharmacy,240,60000,90000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Nursing Science,Medical Sciences,230,55000,85000,Yes,Yes
+University of Benin,Edo,South South,Federal University,Computer Science,Sciences,200,55000,75000,Yes,Yes
+University of Benin,Edo,South South,Federal University,Medicine and Surgery,Medical Sciences,270,70000,110000,Yes,Yes
+University of Benin,Edo,South South,Federal University,Law,Law,220,55000,80000,Yes,Yes
+University of Benin,Edo,South South,Federal University,Pharmacy,Pharmacy,250,65000,95000,Yes,Yes
+University of Benin,Edo,South South,Federal University,Engineering (Chemical),Engineering,200,55000,80000,Yes,Yes
+University of Benin,Edo,South South,Federal University,Accounting,Management Sciences,190,50000,70000,Yes,Yes
+University of Benin,Edo,South South,Federal University,Mass Communication,Social Sciences,185,50000,70000,Yes,Yes
+University of Port Harcourt,Rivers,South South,Federal University,Computer Science,Sciences,180,50000,70000,Yes,Yes
+University of Port Harcourt,Rivers,South South,Federal University,Petroleum Engineering,Engineering,220,70000,100000,Yes,Yes
+University of Port Harcourt,Rivers,South South,Federal University,Medicine and Surgery,Medical Sciences,260,70000,110000,Yes,Yes
+University of Port Harcourt,Rivers,South South,Federal University,Law,Law,210,55000,80000,Yes,Yes
+University of Port Harcourt,Rivers,South South,Federal University,Accounting,Management Sciences,190,50000,70000,Yes,Yes
+University of Port Harcourt,Rivers,South South,Federal University,Engineering (Chemical),Engineering,200,55000,80000,Yes,Yes
+University of Port Harcourt,Rivers,South South,Federal University,Mass Communication,Social Sciences,185,48000,68000,Yes,Yes
+University of Ilorin,Kwara,North Central,Federal University,Computer Science,Sciences,180,40000,60000,Yes,Yes
+University of Ilorin,Kwara,North Central,Federal University,Medicine and Surgery,Medical Sciences,260,65000,100000,Yes,Yes
+University of Ilorin,Kwara,North Central,Federal University,Law,Law,200,45000,70000,Yes,Yes
+University of Ilorin,Kwara,North Central,Federal University,Engineering (Electrical),Engineering,190,50000,75000,Yes,Yes
+University of Ilorin,Kwara,North Central,Federal University,Economics,Social Sciences,180,40000,60000,Yes,Yes
+University of Ilorin,Kwara,North Central,Federal University,Nursing Science,Medical Sciences,240,55000,85000,Yes,Yes
+University of Ilorin,Kwara,North Central,Federal University,Accounting,Management Sciences,180,40000,60000,Yes,Yes
+Nnamdi Azikiwe University,Anambra,South East,Federal University,Computer Science,Sciences,180,50000,70000,Yes,Yes
+Nnamdi Azikiwe University,Anambra,South East,Federal University,Medicine and Surgery,Medical Sciences,260,65000,100000,Yes,Yes
+Nnamdi Azikiwe University,Anambra,South East,Federal University,Law,Law,200,50000,75000,Yes,Yes
+Nnamdi Azikiwe University,Anambra,South East,Federal University,Accounting,Management Sciences,180,45000,65000,Yes,Yes
+Nnamdi Azikiwe University,Anambra,South East,Federal University,Engineering (Civil),Engineering,190,50000,75000,Yes,Yes
+Nnamdi Azikiwe University,Anambra,South East,Federal University,Mass Communication,Social Sciences,175,45000,65000,Yes,Yes
+Nnamdi Azikiwe University,Anambra,South East,Federal University,Pharmacy,Pharmacy,245,60000,90000,Yes,Yes
+Federal University of Technology Akure,Ondo,South West,Federal University,Computer Science,Sciences,180,45000,65000,Yes,Yes
+Federal University of Technology Akure,Ondo,South West,Federal University,Engineering (Electrical),Engineering,190,50000,70000,Yes,Yes
+Federal University of Technology Akure,Ondo,South West,Federal University,Architecture,Environmental Sciences,180,45000,65000,Yes,Yes
+Federal University of Technology Akure,Ondo,South West,Federal University,Information Technology,Sciences,175,40000,60000,Yes,Yes
+Federal University of Technology Akure,Ondo,South West,Federal University,Engineering (Civil),Engineering,185,48000,68000,Yes,Yes
+Federal University of Technology Akure,Ondo,South West,Federal University,Engineering (Mechanical),Engineering,185,48000,68000,Yes,Yes
+Federal University of Technology Minna,Niger,North Central,Federal University,Computer Science,Sciences,170,35000,55000,Yes,Yes
+Federal University of Technology Minna,Niger,North Central,Federal University,Engineering (Electrical),Engineering,180,40000,60000,Yes,Yes
+Federal University of Technology Minna,Niger,North Central,Federal University,Information Technology,Sciences,165,35000,55000,Yes,Yes
+Federal University of Technology Minna,Niger,North Central,Federal University,Engineering (Civil),Engineering,175,38000,58000,Yes,Yes
+Federal University of Technology Owerri,Imo,South East,Federal University,Computer Science,Sciences,175,40000,60000,Yes,Yes
+Federal University of Technology Owerri,Imo,South East,Federal University,Engineering (Mechanical),Engineering,180,45000,65000,Yes,Yes
+Federal University of Technology Owerri,Imo,South East,Federal University,Architecture,Environmental Sciences,175,40000,60000,Yes,Yes
+Federal University of Technology Owerri,Imo,South East,Federal University,Engineering (Civil),Engineering,178,42000,62000,Yes,Yes
+Bayero University Kano,Kano,North West,Federal University,Computer Science,Sciences,170,35000,55000,Yes,Yes
+Bayero University Kano,Kano,North West,Federal University,Medicine and Surgery,Medical Sciences,250,60000,95000,Yes,Yes
+Bayero University Kano,Kano,North West,Federal University,Law,Law,190,40000,60000,Yes,Yes
+Bayero University Kano,Kano,North West,Federal University,Economics,Social Sciences,170,35000,55000,Yes,Yes
+Bayero University Kano,Kano,North West,Federal University,Engineering (Electrical),Engineering,175,40000,60000,Yes,Yes
+Bayero University Kano,Kano,North West,Federal University,Accounting,Management Sciences,170,35000,55000,Yes,Yes
+University of Calabar,Cross River,South South,Federal University,Computer Science,Sciences,170,40000,60000,Yes,Yes
+University of Calabar,Cross River,South South,Federal University,Medicine and Surgery,Medical Sciences,250,60000,95000,Yes,Yes
+University of Calabar,Cross River,South South,Federal University,Law,Law,190,45000,65000,Yes,Yes
+University of Calabar,Cross River,South South,Federal University,Mass Communication,Social Sciences,180,42000,62000,Yes,Yes
+University of Calabar,Cross River,South South,Federal University,Accounting,Management Sciences,175,40000,60000,Yes,Yes
+University of Abuja,FCT,North Central,Federal University,Computer Science,Sciences,180,50000,70000,Yes,Yes
+University of Abuja,FCT,North Central,Federal University,Law,Law,200,55000,80000,Yes,Yes
+University of Abuja,FCT,North Central,Federal University,Accounting,Management Sciences,180,50000,70000,Yes,Yes
+University of Abuja,FCT,North Central,Federal University,Economics,Social Sciences,175,45000,65000,Yes,Yes
+University of Abuja,FCT,North Central,Federal University,Mass Communication,Social Sciences,175,45000,65000,Yes,Yes
+University of Maiduguri,Borno,North East,Federal University,Computer Science,Sciences,160,35000,55000,Yes,Yes
+University of Maiduguri,Borno,North East,Federal University,Medicine and Surgery,Medical Sciences,240,60000,95000,Yes,Yes
+University of Maiduguri,Borno,North East,Federal University,Law,Law,175,40000,60000,Yes,Yes
+University of Maiduguri,Borno,North East,Federal University,Agricultural Science,Agriculture,155,30000,50000,Yes,Yes
+University of Maiduguri,Borno,North East,Federal University,Economics,Social Sciences,160,35000,55000,Yes,Yes
+Usman Dan Fodio University,Sokoto,North West,Federal University,Computer Science,Sciences,160,35000,55000,Yes,Yes
+Usman Dan Fodio University,Sokoto,North West,Federal University,Medicine and Surgery,Medical Sciences,240,55000,90000,Yes,Yes
+Usman Dan Fodio University,Sokoto,North West,Federal University,Law,Law,175,40000,60000,Yes,Yes
+Usman Dan Fodio University,Sokoto,North West,Federal University,Agricultural Science,Agriculture,155,30000,50000,Yes,Yes
+Federal University Lokoja,Kogi,North Central,Federal University,Computer Science,Sciences,160,35000,55000,Yes,Yes
+Federal University Lokoja,Kogi,North Central,Federal University,Accounting,Management Sciences,160,35000,55000,Yes,Yes
+Federal University Lokoja,Kogi,North Central,Federal University,Economics,Social Sciences,158,33000,53000,Yes,Yes
+Federal University Lafia,Nasarawa,North Central,Federal University,Computer Science,Sciences,160,35000,55000,Yes,Yes
+Federal University Lafia,Nasarawa,North Central,Federal University,Agricultural Science,Agriculture,155,30000,50000,Yes,Yes
+Federal University Lafia,Nasarawa,North Central,Federal University,Nursing Science,Medical Sciences,220,45000,70000,Yes,Yes
+Federal University Dutse,Jigawa,North West,Federal University,Computer Science,Sciences,155,30000,50000,Yes,Yes
+Federal University Dutse,Jigawa,North West,Federal University,Agricultural Science,Agriculture,150,28000,48000,Yes,Yes
+Federal University Gashua,Yobe,North East,Federal University,Computer Science,Sciences,150,30000,50000,Yes,Yes
+Federal University Gashua,Yobe,North East,Federal University,Agricultural Science,Agriculture,148,28000,45000,Yes,Yes
+Federal University Kashere,Gombe,North East,Federal University,Computer Science,Sciences,150,30000,50000,Yes,Yes
+Federal University Kashere,Gombe,North East,Federal University,Agricultural Science,Agriculture,148,28000,45000,Yes,Yes
+Federal University Birnin Kebbi,Kebbi,North West,Federal University,Computer Science,Sciences,155,30000,50000,Yes,Yes
+Federal University Birnin Kebbi,Kebbi,North West,Federal University,Agricultural Science,Agriculture,150,28000,45000,Yes,Yes
+Federal University Wukari,Taraba,North East,Federal University,Computer Science,Sciences,155,30000,50000,Yes,Yes
+Federal University Oye-Ekiti,Ekiti,South West,Federal University,Computer Science,Sciences,165,35000,55000,Yes,Yes
+Federal University Oye-Ekiti,Ekiti,South West,Federal University,Engineering (Civil),Engineering,165,38000,58000,Yes,Yes
+Federal University Oye-Ekiti,Ekiti,South West,Federal University,Agricultural Science,Agriculture,160,33000,53000,Yes,Yes
+Federal University Ndufu-Alike,Ebonyi,South East,Federal University,Computer Science,Sciences,160,33000,53000,Yes,Yes
+Federal University Ndufu-Alike,Ebonyi,South East,Federal University,Agricultural Science,Agriculture,155,30000,50000,Yes,Yes
+Veritas University Abuja,FCT,North Central,Private University,Computer Science,Sciences,160,350000,450000,Yes,Yes
+Veritas University Abuja,FCT,North Central,Private University,Accounting,Management Sciences,160,350000,450000,Yes,Yes
+Veritas University Abuja,FCT,North Central,Private University,Law,Law,180,400000,500000,Yes,Yes
+Veritas University Abuja,FCT,North Central,Private University,Mass Communication,Social Sciences,160,350000,450000,Yes,Yes
+Veritas University Abuja,FCT,North Central,Private University,Economics,Social Sciences,160,350000,450000,Yes,Yes
+Veritas University Abuja,FCT,North Central,Private University,Psychology,Social Sciences,160,350000,450000,Yes,Yes
+Covenant University,Ogun,South West,Private University,Computer Science,Sciences,200,1200000,1500000,Yes,Yes
+Covenant University,Ogun,South West,Private University,Engineering (Electrical),Engineering,200,1300000,1600000,Yes,Yes
+Covenant University,Ogun,South West,Private University,Accounting,Management Sciences,200,1200000,1500000,Yes,Yes
+Covenant University,Ogun,South West,Private University,Medicine and Surgery,Medical Sciences,260,1800000,2200000,Yes,Yes
+Covenant University,Ogun,South West,Private University,Law,Law,220,1300000,1600000,Yes,Yes
+Covenant University,Ogun,South West,Private University,Economics,Social Sciences,200,1200000,1500000,Yes,Yes
+Covenant University,Ogun,South West,Private University,Mass Communication,Social Sciences,195,1200000,1500000,Yes,Yes
+Babcock University,Ogun,South West,Private University,Computer Science,Sciences,180,900000,1200000,Yes,Yes
+Babcock University,Ogun,South West,Private University,Medicine and Surgery,Medical Sciences,240,1500000,1900000,Yes,Yes
+Babcock University,Ogun,South West,Private University,Accounting,Management Sciences,180,900000,1200000,Yes,Yes
+Babcock University,Ogun,South West,Private University,Law,Law,200,1000000,1300000,Yes,Yes
+Babcock University,Ogun,South West,Private University,Nursing Science,Medical Sciences,220,1200000,1500000,Yes,Yes
+Babcock University,Ogun,South West,Private University,Mass Communication,Social Sciences,175,900000,1200000,Yes,Yes
+American University of Nigeria,Adamawa,North East,Private University,Computer Science,Sciences,180,1500000,2000000,Yes,Yes
+American University of Nigeria,Adamawa,North East,Private University,Engineering (Electrical),Engineering,180,1600000,2100000,Yes,Yes
+American University of Nigeria,Adamawa,North East,Private University,Economics,Social Sciences,180,1500000,2000000,Yes,Yes
+American University of Nigeria,Adamawa,North East,Private University,Mass Communication,Social Sciences,175,1500000,2000000,Yes,Yes
+Pan-Atlantic University,Lagos,South West,Private University,Computer Science,Sciences,180,1400000,1800000,Yes,Yes
+Pan-Atlantic University,Lagos,South West,Private University,Economics,Social Sciences,180,1400000,1800000,Yes,Yes
+Pan-Atlantic University,Lagos,South West,Private University,Engineering (Electrical),Engineering,180,1500000,1900000,Yes,Yes
+Pan-Atlantic University,Lagos,South West,Private University,Business Administration,Management Sciences,175,1400000,1800000,Yes,Yes
+Redeemer's University,Osun,South West,Private University,Computer Science,Sciences,180,700000,900000,Yes,Yes
+Redeemer's University,Osun,South West,Private University,Accounting,Management Sciences,180,700000,900000,Yes,Yes
+Redeemer's University,Osun,South West,Private University,Economics,Social Sciences,175,700000,900000,Yes,Yes
+Redeemer's University,Osun,South West,Private University,Mass Communication,Social Sciences,170,700000,900000,Yes,Yes
+Landmark University,Kwara,North Central,Private University,Computer Science,Sciences,170,600000,800000,Yes,Yes
+Landmark University,Kwara,North Central,Private University,Agricultural Science,Agriculture,160,550000,750000,Yes,Yes
+Landmark University,Kwara,North Central,Private University,Engineering (Civil),Engineering,170,650000,850000,Yes,Yes
+Landmark University,Kwara,North Central,Private University,Accounting,Management Sciences,165,600000,800000,Yes,Yes
+Afe Babalola University,Ekiti,South West,Private University,Computer Science,Sciences,180,900000,1200000,Yes,Yes
+Afe Babalola University,Ekiti,South West,Private University,Law,Law,200,1000000,1400000,Yes,Yes
+Afe Babalola University,Ekiti,South West,Private University,Medicine and Surgery,Medical Sciences,250,1600000,2000000,Yes,Yes
+Afe Babalola University,Ekiti,South West,Private University,Engineering (Civil),Engineering,180,950000,1250000,Yes,Yes
+Bowen University,Osun,South West,Private University,Computer Science,Sciences,175,700000,950000,Yes,Yes
+Bowen University,Osun,South West,Private University,Medicine and Surgery,Medical Sciences,240,1400000,1800000,Yes,Yes
+Bowen University,Osun,South West,Private University,Accounting,Management Sciences,175,700000,950000,Yes,Yes
+Bowen University,Osun,South West,Private University,Nursing Science,Medical Sciences,220,1100000,1400000,Yes,Yes
+Baze University,FCT,North Central,Private University,Computer Science,Sciences,175,1200000,1600000,Yes,Yes
+Baze University,FCT,North Central,Private University,Law,Law,190,1300000,1700000,Yes,Yes
+Baze University,FCT,North Central,Private University,Engineering (Electrical),Engineering,175,1200000,1600000,Yes,Yes
+Baze University,FCT,North Central,Private University,Economics,Social Sciences,170,1200000,1600000,Yes,Yes
+Nile University of Nigeria,FCT,North Central,Private University,Computer Science,Sciences,170,1000000,1400000,Yes,Yes
+Nile University of Nigeria,FCT,North Central,Private University,Engineering (Electrical),Engineering,170,1100000,1500000,Yes,Yes
+Nile University of Nigeria,FCT,North Central,Private University,Accounting,Management Sciences,170,1000000,1400000,Yes,Yes
+Nile University of Nigeria,FCT,North Central,Private University,Law,Law,180,1100000,1500000,Yes,Yes
+Madonna University,Anambra,South East,Private University,Computer Science,Sciences,165,600000,800000,Yes,Yes
+Madonna University,Anambra,South East,Private University,Medicine and Surgery,Medical Sciences,240,1200000,1600000,Yes,Yes
+Madonna University,Anambra,South East,Private University,Law,Law,180,700000,950000,Yes,Yes
+Igbinedion University,Edo,South South,Private University,Computer Science,Sciences,165,700000,950000,Yes,Yes
+Igbinedion University,Edo,South South,Private University,Medicine and Surgery,Medical Sciences,240,1400000,1800000,Yes,Yes
+Igbinedion University,Edo,South South,Private University,Law,Law,180,750000,1000000,Yes,Yes
+Igbinedion University,Edo,South South,Private University,Pharmacy,Pharmacy,230,1100000,1500000,Yes,Yes
+Lagos State University,Lagos,South West,State University,Computer Science,Sciences,180,80000,120000,Yes,Yes
+Lagos State University,Lagos,South West,State University,Law,Law,200,100000,150000,Yes,Yes
+Lagos State University,Lagos,South West,State University,Medicine and Surgery,Medical Sciences,250,120000,180000,Yes,Yes
+Lagos State University,Lagos,South West,State University,Accounting,Management Sciences,180,80000,120000,Yes,Yes
+Lagos State University,Lagos,South West,State University,Mass Communication,Social Sciences,175,78000,115000,Yes,Yes
+Lagos State University,Lagos,South West,State University,Economics,Social Sciences,180,80000,120000,Yes,Yes
+Lagos State University,Lagos,South West,State University,Engineering (Civil),Engineering,185,85000,125000,Yes,Yes
+Rivers State University,Rivers,South South,State University,Computer Science,Sciences,170,60000,90000,Yes,Yes
+Rivers State University,Rivers,South South,State University,Petroleum Engineering,Engineering,190,80000,120000,Yes,Yes
+Rivers State University,Rivers,South South,State University,Accounting,Management Sciences,170,60000,90000,Yes,Yes
+Rivers State University,Rivers,South South,State University,Engineering (Civil),Engineering,175,65000,95000,Yes,Yes
+Rivers State University,Rivers,South South,State University,Mass Communication,Social Sciences,165,58000,88000,Yes,Yes
+Kogi State University,Kogi,North Central,State University,Computer Science,Sciences,160,40000,60000,Yes,Yes
+Kogi State University,Kogi,North Central,State University,Law,Law,175,45000,65000,Yes,Yes
+Kogi State University,Kogi,North Central,State University,Accounting,Management Sciences,160,40000,60000,Yes,Yes
+Kogi State University,Kogi,North Central,State University,Economics,Social Sciences,158,38000,58000,Yes,Yes
+Delta State University,Delta,South South,State University,Computer Science,Sciences,165,50000,75000,Yes,Yes
+Delta State University,Delta,South South,State University,Medicine and Surgery,Medical Sciences,240,80000,120000,Yes,Yes
+Delta State University,Delta,South South,State University,Law,Law,180,55000,80000,Yes,Yes
+Delta State University,Delta,South South,State University,Mass Communication,Social Sciences,165,50000,75000,Yes,Yes
+Imo State University,Imo,South East,State University,Computer Science,Sciences,165,50000,75000,Yes,Yes
+Imo State University,Imo,South East,State University,Law,Law,180,55000,80000,Yes,Yes
+Imo State University,Imo,South East,State University,Accounting,Management Sciences,165,50000,75000,Yes,Yes
+Imo State University,Imo,South East,State University,Medicine and Surgery,Medical Sciences,235,75000,115000,Yes,Yes
+Enugu State University,Enugu,South East,State University,Computer Science,Sciences,160,45000,70000,Yes,Yes
+Enugu State University,Enugu,South East,State University,Law,Law,175,50000,75000,Yes,Yes
+Enugu State University,Enugu,South East,State University,Accounting,Management Sciences,160,45000,70000,Yes,Yes
+Ekiti State University,Ekiti,South West,State University,Computer Science,Sciences,160,45000,70000,Yes,Yes
+Ekiti State University,Ekiti,South West,State University,Law,Law,175,50000,75000,Yes,Yes
+Ekiti State University,Ekiti,South West,State University,Accounting,Management Sciences,160,45000,70000,Yes,Yes
+Ekiti State University,Ekiti,South West,State University,Mass Communication,Social Sciences,158,43000,68000,Yes,Yes
+Osun State University,Osun,South West,State University,Computer Science,Sciences,160,45000,70000,Yes,Yes
+Osun State University,Osun,South West,State University,Agricultural Science,Agriculture,155,40000,60000,Yes,Yes
+Osun State University,Osun,South West,State University,Nursing Science,Medical Sciences,215,55000,85000,Yes,Yes
+Ondo State University of Science and Technology,Ondo,South West,State University,Computer Science,Sciences,160,45000,70000,Yes,Yes
+Ondo State University of Science and Technology,Ondo,South West,State University,Engineering (Electrical),Engineering,165,48000,72000,Yes,Yes
+Abia State University,Abia,South East,State University,Computer Science,Sciences,160,45000,68000,Yes,Yes
+Abia State University,Abia,South East,State University,Law,Law,175,50000,75000,Yes,Yes
+Abia State University,Abia,South East,State University,Medicine and Surgery,Medical Sciences,235,70000,105000,Yes,Yes
+Abia State University,Abia,South East,State University,Mass Communication,Social Sciences,158,43000,65000,Yes,Yes
+Anambra State University,Anambra,South East,State University,Computer Science,Sciences,160,45000,68000,Yes,Yes
+Anambra State University,Anambra,South East,State University,Accounting,Management Sciences,160,45000,68000,Yes,Yes
+Cross River State University,Cross River,South South,State University,Computer Science,Sciences,160,45000,68000,Yes,Yes
+Cross River State University,Cross River,South South,State University,Agricultural Science,Agriculture,155,40000,60000,Yes,Yes
+Akwa Ibom State University,Akwa Ibom,South South,State University,Computer Science,Sciences,160,45000,68000,Yes,Yes
+Akwa Ibom State University,Akwa Ibom,South South,State University,Engineering (Civil),Engineering,165,48000,72000,Yes,Yes
+Akwa Ibom State University,Akwa Ibom,South South,State University,Nursing Science,Medical Sciences,215,55000,85000,Yes,Yes
+Bayelsa Medical University,Bayelsa,South South,State University,Medicine and Surgery,Medical Sciences,240,90000,130000,Yes,Yes
+Niger Delta University,Bayelsa,South South,State University,Computer Science,Sciences,160,45000,68000,Yes,Yes
+Niger Delta University,Bayelsa,South South,State University,Petroleum Engineering,Engineering,170,55000,80000,Yes,Yes
+Taraba State University,Taraba,North East,State University,Computer Science,Sciences,155,35000,55000,Yes,Yes
+Taraba State University,Taraba,North East,State University,Agricultural Science,Agriculture,150,30000,50000,Yes,Yes
+Gombe State University,Gombe,North East,State University,Computer Science,Sciences,155,35000,55000,Yes,Yes
+Gombe State University,Gombe,North East,State University,Medicine and Surgery,Medical Sciences,230,60000,90000,Yes,Yes
+Adamawa State University,Adamawa,North East,State University,Computer Science,Sciences,155,35000,55000,Yes,Yes
+Adamawa State University,Adamawa,North East,State University,Agricultural Science,Agriculture,150,30000,50000,Yes,Yes
+Yobe State University,Yobe,North East,State University,Computer Science,Sciences,150,30000,50000,Yes,Yes
+Borno State University,Borno,North East,State University,Computer Science,Sciences,150,30000,50000,Yes,Yes
+Kaduna State University,Kaduna,North West,State University,Computer Science,Sciences,165,40000,60000,Yes,Yes
+Kaduna State University,Kaduna,North West,State University,Law,Law,175,45000,65000,Yes,Yes
+Kaduna State University,Kaduna,North West,State University,Accounting,Management Sciences,160,38000,58000,Yes,Yes
+Kano State University of Science and Technology,Kano,North West,State University,Computer Science,Sciences,160,35000,55000,Yes,Yes
+Kano State University of Science and Technology,Kano,North West,State University,Engineering (Electrical),Engineering,165,40000,60000,Yes,Yes
+Zamfara State University,Zamfara,North West,State University,Computer Science,Sciences,150,30000,50000,Yes,Yes
+Kebbi State University,Kebbi,North West,State University,Computer Science,Sciences,150,30000,50000,Yes,Yes
+Sokoto State University,Sokoto,North West,State University,Computer Science,Sciences,150,30000,50000,Yes,Yes
+Kwara State University,Kwara,North Central,State University,Computer Science,Sciences,165,50000,75000,Yes,Yes
+Kwara State University,Kwara,North Central,State University,Accounting,Management Sciences,165,50000,75000,Yes,Yes
+Kwara State University,Kwara,North Central,State University,Mass Communication,Social Sciences,160,48000,72000,Yes,Yes
+Nasarawa State University,Nasarawa,North Central,State University,Computer Science,Sciences,160,40000,60000,Yes,Yes
+Niger State University,Niger,North Central,State University,Computer Science,Sciences,160,40000,60000,Yes,Yes
+Plateau State University,Plateau,North Central,State University,Computer Science,Sciences,160,40000,60000,Yes,Yes
+Benue State University,Benue,North Central,State University,Computer Science,Sciences,160,40000,60000,Yes,Yes
+Benue State University,Benue,North Central,State University,Law,Law,175,45000,65000,Yes,Yes
+Yaba College of Technology,Lagos,South West,Federal Polytechnic,Computer Science,Sciences,140,30000,50000,Yes,Yes
+Yaba College of Technology,Lagos,South West,Federal Polytechnic,Accountancy,Management Sciences,140,30000,50000,Yes,Yes
+Yaba College of Technology,Lagos,South West,Federal Polytechnic,Electrical Engineering,Engineering,140,35000,55000,Yes,Yes
+Yaba College of Technology,Lagos,South West,Federal Polytechnic,Mass Communication,Social Sciences,135,28000,48000,Yes,Yes
+Yaba College of Technology,Lagos,South West,Federal Polytechnic,Business Administration,Management Sciences,135,28000,48000,Yes,Yes
+Yaba College of Technology,Lagos,South West,Federal Polytechnic,Nursing Science,Medical Sciences,130,28000,48000,Yes,Yes
+Federal Polytechnic Nekede,Imo,South East,Federal Polytechnic,Computer Science,Sciences,130,25000,45000,Yes,Yes
+Federal Polytechnic Nekede,Imo,South East,Federal Polytechnic,Accountancy,Management Sciences,130,25000,45000,Yes,Yes
+Federal Polytechnic Nekede,Imo,South East,Federal Polytechnic,Electrical Engineering,Engineering,130,28000,48000,Yes,Yes
+Federal Polytechnic Ilaro,Ogun,South West,Federal Polytechnic,Computer Science,Sciences,130,25000,45000,Yes,Yes
+Federal Polytechnic Ilaro,Ogun,South West,Federal Polytechnic,Electrical Engineering,Engineering,130,28000,48000,Yes,Yes
+Federal Polytechnic Ilaro,Ogun,South West,Federal Polytechnic,Accountancy,Management Sciences,130,25000,45000,Yes,Yes
+Federal Polytechnic Bida,Niger,North Central,Federal Polytechnic,Computer Science,Sciences,130,25000,45000,Yes,Yes
+Federal Polytechnic Bida,Niger,North Central,Federal Polytechnic,Accountancy,Management Sciences,130,25000,45000,Yes,Yes
+Federal Polytechnic Bida,Niger,North Central,Federal Polytechnic,Electrical Engineering,Engineering,130,28000,48000,Yes,Yes
+Federal Polytechnic Ado-Ekiti,Ekiti,South West,Federal Polytechnic,Computer Science,Sciences,130,25000,45000,Yes,Yes
+Federal Polytechnic Ado-Ekiti,Ekiti,South West,Federal Polytechnic,Accountancy,Management Sciences,130,25000,45000,Yes,Yes
+Federal Polytechnic Ado-Ekiti,Ekiti,South West,Federal Polytechnic,Mechanical Engineering,Engineering,130,28000,48000,Yes,Yes
+Federal Polytechnic Bauchi,Bauchi,North East,Federal Polytechnic,Computer Science,Sciences,125,22000,42000,Yes,Yes
+Federal Polytechnic Bauchi,Bauchi,North East,Federal Polytechnic,Accountancy,Management Sciences,125,22000,42000,Yes,Yes
+Federal Polytechnic Bauchi,Bauchi,North East,Federal Polytechnic,Electrical Engineering,Engineering,125,24000,44000,Yes,Yes
+Federal Polytechnic Daura,Katsina,North West,Federal Polytechnic,Computer Science,Sciences,125,22000,42000,Yes,Yes
+Federal Polytechnic Daura,Katsina,North West,Federal Polytechnic,Accountancy,Management Sciences,125,22000,42000,Yes,Yes
+Federal Polytechnic Idah,Kogi,North Central,Federal Polytechnic,Computer Science,Sciences,125,22000,42000,Yes,Yes
+Federal Polytechnic Idah,Kogi,North Central,Federal Polytechnic,Accountancy,Management Sciences,125,22000,42000,Yes,Yes
+Federal Polytechnic Mubi,Adamawa,North East,Federal Polytechnic,Computer Science,Sciences,125,22000,42000,Yes,Yes
+Federal Polytechnic Nasarawa,Nasarawa,North Central,Federal Polytechnic,Computer Science,Sciences,125,22000,42000,Yes,Yes
+Federal Polytechnic Nasarawa,Nasarawa,North Central,Federal Polytechnic,Accountancy,Management Sciences,125,22000,42000,Yes,Yes
+Federal Polytechnic Offa,Kwara,North Central,Federal Polytechnic,Computer Science,Sciences,125,22000,42000,Yes,Yes
+Federal Polytechnic Offa,Kwara,North Central,Federal Polytechnic,Electrical Engineering,Engineering,125,24000,44000,Yes,Yes
+Federal Polytechnic Ukana,Akwa Ibom,South South,Federal Polytechnic,Computer Science,Sciences,125,22000,42000,Yes,Yes
+Federal Polytechnic Kaura Namoda,Zamfara,North West,Federal Polytechnic,Computer Science,Sciences,120,20000,40000,Yes,Yes
+Federal Polytechnic Oko,Anambra,South East,Federal Polytechnic,Computer Science,Sciences,130,24000,44000,Yes,Yes
+Federal Polytechnic Oko,Anambra,South East,Federal Polytechnic,Accountancy,Management Sciences,130,24000,44000,Yes,Yes
+Auchi Polytechnic,Edo,South South,Federal Polytechnic,Computer Science,Sciences,130,24000,44000,Yes,Yes
+Auchi Polytechnic,Edo,South South,Federal Polytechnic,Accountancy,Management Sciences,130,24000,44000,Yes,Yes
+Auchi Polytechnic,Edo,South South,Federal Polytechnic,Electrical Engineering,Engineering,130,26000,46000,Yes,Yes
+The Polytechnic Ibadan,Oyo,South West,State Polytechnic,Computer Science,Sciences,130,25000,45000,Yes,Yes
+The Polytechnic Ibadan,Oyo,South West,State Polytechnic,Accountancy,Management Sciences,130,25000,45000,Yes,Yes
+The Polytechnic Ibadan,Oyo,South West,State Polytechnic,Electrical Engineering,Engineering,130,27000,47000,Yes,Yes
+Lagos State Polytechnic,Lagos,South West,State Polytechnic,Computer Science,Sciences,135,28000,48000,Yes,Yes
+Lagos State Polytechnic,Lagos,South West,State Polytechnic,Accountancy,Management Sciences,135,28000,48000,Yes,Yes
+Lagos State Polytechnic,Lagos,South West,State Polytechnic,Electrical Engineering,Engineering,135,30000,50000,Yes,Yes
+Kano State Polytechnic,Kano,North West,State Polytechnic,Computer Science,Sciences,125,22000,42000,Yes,Yes
+Kano State Polytechnic,Kano,North West,State Polytechnic,Accountancy,Management Sciences,125,22000,42000,Yes,Yes
+Kaduna Polytechnic,Kaduna,North West,State Polytechnic,Computer Science,Sciences,128,23000,43000,Yes,Yes
+Kaduna Polytechnic,Kaduna,North West,State Polytechnic,Electrical Engineering,Engineering,128,25000,45000,Yes,Yes
+Kaduna Polytechnic,Kaduna,North West,State Polytechnic,Accountancy,Management Sciences,128,23000,43000,Yes,Yes
+Akanu Ibiam Federal Polytechnic,Ebonyi,South East,Federal Polytechnic,Computer Science,Sciences,125,22000,42000,Yes,Yes
+Akanu Ibiam Federal Polytechnic,Ebonyi,South East,Federal Polytechnic,Accountancy,Management Sciences,125,22000,42000,Yes,Yes
+Delta State Polytechnic Ozoro,Delta,South South,State Polytechnic,Computer Science,Sciences,125,22000,42000,Yes,Yes
+Delta State Polytechnic Ozoro,Delta,South South,State Polytechnic,Accountancy,Management Sciences,125,22000,42000,Yes,Yes
+Cross River Institute of Technology,Cross River,South South,State Polytechnic,Computer Science,Sciences,120,20000,40000,Yes,Yes
+Imo State Polytechnic,Imo,South East,State Polytechnic,Computer Science,Sciences,125,22000,42000,Yes,Yes
+Imo State Polytechnic,Imo,South East,State Polytechnic,Accountancy,Management Sciences,125,22000,42000,Yes,Yes
+Plateau State Polytechnic,Plateau,North Central,State Polytechnic,Computer Science,Sciences,120,20000,40000,Yes,Yes
+Borno State Polytechnic,Borno,North East,State Polytechnic,Computer Science,Sciences,115,18000,38000,Yes,Yes
+Federal College of Education Zaria,Kaduna,North West,Federal College of Education,Computer Science Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Zaria,Kaduna,North West,Federal College of Education,Mathematics Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Zaria,Kaduna,North West,Federal College of Education,Physics Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Abeokuta,Ogun,South West,Federal College of Education,Computer Science Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Abeokuta,Ogun,South West,Federal College of Education,Mathematics Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Abeokuta,Ogun,South West,Federal College of Education,English Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Kano,Kano,North West,Federal College of Education,Computer Science Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Kano,Kano,North West,Federal College of Education,Mathematics Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Kano,Kano,North West,Federal College of Education,English Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Pankshin,Plateau,North Central,Federal College of Education,Computer Science Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Pankshin,Plateau,North Central,Federal College of Education,Mathematics Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Obudu,Cross River,South South,Federal College of Education,Computer Science Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Obudu,Cross River,South South,Federal College of Education,Biology Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Omoku,Rivers,South South,Federal College of Education,Computer Science Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Omoku,Rivers,South South,Federal College of Education,Mathematics Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Okene,Kogi,North Central,Federal College of Education,Computer Science Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Okene,Kogi,North Central,Federal College of Education,Mathematics Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Eha-Amufu,Enugu,South East,Federal College of Education,Computer Science Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Eha-Amufu,Enugu,South East,Federal College of Education,Biology Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Gusau,Zamfara,North West,Federal College of Education,Computer Science Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Gusau,Zamfara,North West,Federal College of Education,Mathematics Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Kontagora,Niger,North Central,Federal College of Education,Computer Science Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Yola,Adamawa,North East,Federal College of Education,Computer Science Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Yola,Adamawa,North East,Federal College of Education,Mathematics Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Bichi,Kano,North West,Federal College of Education,Computer Science Education,Education,100,15000,30000,Yes,Yes
+Federal College of Education Special Oyo,Oyo,South West,Federal College of Education,Special Education,Education,100,15000,30000,Yes,Yes
+Adeyemi College of Education,Ondo,South West,Federal College of Education,Computer Science Education,Education,100,15000,30000,Yes,Yes
+Adeyemi College of Education,Ondo,South West,Federal College of Education,Mathematics Education,Education,100,15000,30000,Yes,Yes
+Alvan Ikoku Federal College of Education,Imo,South East,Federal College of Education,Computer Science Education,Education,100,15000,30000,Yes,Yes
+Alvan Ikoku Federal College of Education,Imo,South East,Federal College of Education,Mathematics Education,Education,100,15000,30000,Yes,Yes
+Alvan Ikoku Federal College of Education,Imo,South East,Federal College of Education,English Education,Education,100,15000,30000,Yes,Yes
+Shehu Shagari College of Education,Sokoto,North West,Federal College of Education,Computer Science Education,Education,100,15000,30000,Yes,Yes
+Shehu Shagari College of Education,Sokoto,North West,Federal College of Education,Mathematics Education,Education,100,15000,30000,Yes,Yes
+College of Education Ekiadolor,Edo,South South,State College of Education,Computer Science Education,Education,95,12000,25000,Yes,Yes
+College of Education Ekiadolor,Edo,South South,State College of Education,Mathematics Education,Education,95,12000,25000,Yes,Yes
+Lagos State College of Education,Lagos,South West,State College of Education,Computer Science Education,Education,100,18000,32000,Yes,Yes
+Lagos State College of Education,Lagos,South West,State College of Education,Mathematics Education,Education,100,18000,32000,Yes,Yes
+Osun State College of Education,Osun,South West,State College of Education,Computer Science Education,Education,95,12000,25000,Yes,Yes
+Osun State College of Education,Osun,South West,State College of Education,Mathematics Education,Education,95,12000,25000,Yes,Yes
+Oyo State College of Education,Oyo,South West,State College of Education,Computer Science Education,Education,95,12000,25000,Yes,Yes
+Oyo State College of Education,Oyo,South West,State College of Education,Mathematics Education,Education,95,12000,25000,Yes,Yes
+College of Education Akoka,Lagos,South West,State College of Education,Computer Science Education,Education,100,15000,28000,Yes,Yes
+Emmanuel Alayande College of Education,Oyo,South West,State College of Education,Computer Science Education,Education,95,12000,25000,Yes,Yes
+College of Education Oju,Benue,North Central,State College of Education,Computer Science Education,Education,90,10000,22000,Yes,Yes
+Kogi State College of Education,Kogi,North Central,State College of Education,Computer Science Education,Education,90,10000,22000,Yes,Yes
+Niger State College of Education,Niger,North Central,State College of Education,Computer Science Education,Education,90,10000,22000,Yes,Yes
+Plateau State College of Education,Plateau,North Central,State College of Education,Computer Science Education,Education,90,10000,22000,Yes,Yes
+College of Education Gindiri,Plateau,North Central,State College of Education,Mathematics Education,Education,90,10000,22000,Yes,Yes
+Nasarawa State College of Education,Nasarawa,North Central,State College of Education,Computer Science Education,Education,90,10000,22000,Yes,Yes
+Kwara State College of Education,Kwara,North Central,State College of Education,Computer Science Education,Education,95,12000,25000,Yes,Yes
+Enugu State College of Education,Enugu,South East,State College of Education,Computer Science Education,Education,95,12000,25000,Yes,Yes
+Cross River State College of Education,Cross River,South South,State College of Education,Computer Science Education,Education,90,10000,22000,Yes,Yes
+Rivers State College of Education,Rivers,South South,State College of Education,Computer Science Education,Education,90,10000,22000,Yes,Yes
+Delta State College of Education,Delta,South South,State College of Education,Computer Science Education,Education,90,10000,22000,Yes,Yes
+Akwa Ibom State College of Education,Akwa Ibom,South South,State College of Education,Computer Science Education,Education,90,10000,22000,Yes,Yes
+Gombe State College of Education,Gombe,North East,State College of Education,Computer Science Education,Education,90,10000,22000,Yes,Yes
+Adamawa State College of Education,Adamawa,North East,State College of Education,Computer Science Education,Education,90,10000,22000,Yes,Yes
+Taraba State College of Education,Taraba,North East,State College of Education,Computer Science Education,Education,90,10000,22000,Yes,Yes
+Yobe State College of Education,Yobe,North East,State College of Education,Computer Science Education,Education,88,10000,20000,Yes,Yes
+Borno State College of Education,Borno,North East,State College of Education,Computer Science Education,Education,88,10000,20000,Yes,Yes
+Kaduna State College of Education,Kaduna,North West,State College of Education,Computer Science Education,Education,90,10000,22000,Yes,Yes
+Kano State College of Education,Kano,North West,State College of Education,Computer Science Education,Education,90,10000,22000,Yes,Yes
+Zamfara State College of Education,Zamfara,North West,State College of Education,Computer Science Education,Education,88,10000,20000,Yes,Yes
+Kebbi State College of Education,Kebbi,North West,State College of Education,Computer Science Education,Education,88,10000,20000,Yes,Yes
+Sokoto State College of Education,Sokoto,North West,State College of Education,Computer Science Education,Education,88,10000,20000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Mass Communication,Social Sciences,175,40000,60000,Yes,Yes
+Bayero University Kano,Kano,North West,Federal University,Mass Communication,Social Sciences,170,35000,55000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Architecture,Environmental Sciences,210,70000,100000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Architecture,Environmental Sciences,200,60000,85000,Yes,Yes
+University of Port Harcourt,Rivers,South South,Federal University,Architecture,Environmental Sciences,195,60000,85000,Yes,Yes
+University of Benin,Edo,South South,Federal University,Architecture,Environmental Sciences,195,58000,82000,Yes,Yes
+Covenant University,Ogun,South West,Private University,Architecture,Environmental Sciences,200,1250000,1550000,Yes,Yes
+University of Ilorin,Kwara,North Central,Federal University,Pharmacy,Pharmacy,240,55000,85000,Yes,Yes
+Bowen University,Osun,South West,Private University,Pharmacy,Pharmacy,230,1100000,1450000,Yes,Yes
+University of Benin,Edo,South South,Federal University,Nursing Science,Medical Sciences,245,60000,90000,Yes,Yes
+University of Calabar,Cross River,South South,Federal University,Nursing Science,Medical Sciences,240,58000,88000,Yes,Yes
+Bayero University Kano,Kano,North West,Federal University,Nursing Science,Medical Sciences,235,55000,85000,Yes,Yes
+Rivers State University,Rivers,South South,State University,Nursing Science,Medical Sciences,220,65000,95000,Yes,Yes
+Delta State University,Delta,South South,State University,Nursing Science,Medical Sciences,215,60000,90000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Banking and Finance,Management Sciences,200,60000,80000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Banking and Finance,Management Sciences,190,55000,75000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Banking and Finance,Management Sciences,180,45000,65000,Yes,Yes
+Lagos State University,Lagos,South West,State University,Banking and Finance,Management Sciences,180,80000,120000,Yes,Yes
+Covenant University,Ogun,South West,Private University,Banking and Finance,Management Sciences,200,1200000,1500000,Yes,Yes
+Baze University,FCT,North Central,Private University,Banking and Finance,Management Sciences,175,1200000,1600000,Yes,Yes
+Nile University of Nigeria,FCT,North Central,Private University,Banking and Finance,Management Sciences,170,1000000,1400000,Yes,Yes
+Veritas University Abuja,FCT,North Central,Private University,Banking and Finance,Management Sciences,165,350000,450000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Political Science,Social Sciences,190,55000,75000,Yes,Yes
+University of Ibadan,Oyo,South West,Federal University,Political Science,Social Sciences,195,50000,70000,Yes,Yes
+Obafemi Awolowo University,Osun,South West,Federal University,Political Science,Social Sciences,190,50000,70000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Political Science,Social Sciences,185,50000,70000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Political Science,Social Sciences,175,40000,60000,Yes,Yes
+University of Abuja,FCT,North Central,Federal University,Political Science,Social Sciences,180,48000,68000,Yes,Yes
+University of Benin,Edo,South South,Federal University,Political Science,Social Sciences,185,52000,72000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Sociology,Social Sciences,185,55000,75000,Yes,Yes
+University of Ibadan,Oyo,South West,Federal University,Sociology,Social Sciences,185,50000,70000,Yes,Yes
+Obafemi Awolowo University,Osun,South West,Federal University,Sociology,Social Sciences,185,50000,70000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Sociology,Social Sciences,180,50000,70000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Microbiology,Sciences,200,60000,80000,Yes,Yes
+University of Ibadan,Oyo,South West,Federal University,Microbiology,Sciences,200,50000,70000,Yes,Yes
+Obafemi Awolowo University,Osun,South West,Federal University,Microbiology,Sciences,195,50000,70000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Microbiology,Sciences,190,50000,70000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Microbiology,Sciences,185,42000,62000,Yes,Yes
+University of Port Harcourt,Rivers,South South,Federal University,Microbiology,Sciences,185,50000,70000,Yes,Yes
+Covenant University,Ogun,South West,Private University,Microbiology,Sciences,195,1200000,1500000,Yes,Yes
+Babcock University,Ogun,South West,Private University,Microbiology,Sciences,185,900000,1200000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Biochemistry,Sciences,200,60000,80000,Yes,Yes
+University of Ibadan,Oyo,South West,Federal University,Biochemistry,Sciences,200,50000,70000,Yes,Yes
+Obafemi Awolowo University,Osun,South West,Federal University,Biochemistry,Sciences,195,50000,70000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Biochemistry,Sciences,190,55000,75000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Biochemistry,Sciences,185,42000,62000,Yes,Yes
+Covenant University,Ogun,South West,Private University,Biochemistry,Sciences,200,1200000,1500000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Estate Management,Environmental Sciences,195,60000,80000,Yes,Yes
+Obafemi Awolowo University,Osun,South West,Federal University,Estate Management,Environmental Sciences,190,50000,70000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Estate Management,Environmental Sciences,185,55000,75000,Yes,Yes
+Federal University of Technology Akure,Ondo,South West,Federal University,Estate Management,Environmental Sciences,180,45000,65000,Yes,Yes
+Covenant University,Ogun,South West,Private University,Estate Management,Environmental Sciences,195,1200000,1500000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Quantity Surveying,Environmental Sciences,195,60000,80000,Yes,Yes
+Obafemi Awolowo University,Osun,South West,Federal University,Quantity Surveying,Environmental Sciences,190,50000,70000,Yes,Yes
+Federal University of Technology Akure,Ondo,South West,Federal University,Quantity Surveying,Environmental Sciences,180,45000,65000,Yes,Yes
+Federal University of Technology Owerri,Imo,South East,Federal University,Quantity Surveying,Environmental Sciences,178,42000,62000,Yes,Yes
+University of Ibadan,Oyo,South West,Federal University,Geology,Sciences,195,50000,70000,Yes,Yes
+Obafemi Awolowo University,Osun,South West,Federal University,Geology,Sciences,190,50000,70000,Yes,Yes
+University of Calabar,Cross River,South South,Federal University,Geology,Sciences,180,42000,62000,Yes,Yes
+University of Port Harcourt,Rivers,South South,Federal University,Geology,Sciences,195,52000,72000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Geology,Sciences,185,42000,62000,Yes,Yes
+University of Ibadan,Oyo,South West,Federal University,Animal Science,Agriculture,170,40000,60000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Animal Science,Agriculture,165,38000,58000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Animal Science,Agriculture,165,40000,60000,Yes,Yes
+Federal University Lafia,Nasarawa,North Central,Federal University,Animal Science,Agriculture,158,30000,50000,Yes,Yes
+University of Ibadan,Oyo,South West,Federal University,Food Science and Technology,Agriculture,180,45000,65000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Food Science and Technology,Agriculture,175,42000,62000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Food Science and Technology,Agriculture,170,38000,58000,Yes,Yes
+Federal University of Technology Akure,Ondo,South West,Federal University,Food Science and Technology,Agriculture,175,42000,62000,Yes,Yes
+Federal University of Technology Owerri,Imo,South East,Federal University,Food Science and Technology,Agriculture,172,40000,60000,Yes,Yes
+University of Ibadan,Oyo,South West,Federal University,Statistics,Sciences,195,50000,70000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Statistics,Sciences,195,58000,78000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Statistics,Sciences,180,40000,60000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Statistics,Sciences,185,50000,70000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Physics,Sciences,195,58000,78000,Yes,Yes
+University of Ibadan,Oyo,South West,Federal University,Physics,Sciences,195,50000,70000,Yes,Yes
+Obafemi Awolowo University,Osun,South West,Federal University,Physics,Sciences,190,50000,70000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Physics,Sciences,180,40000,60000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Chemistry,Sciences,200,58000,78000,Yes,Yes
+University of Ibadan,Oyo,South West,Federal University,Chemistry,Sciences,195,50000,70000,Yes,Yes
+Obafemi Awolowo University,Osun,South West,Federal University,Chemistry,Sciences,195,50000,70000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Chemistry,Sciences,185,42000,62000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Dentistry,Medical Sciences,290,85000,125000,Yes,Yes
+University of Ibadan,Oyo,South West,Federal University,Dentistry,Medical Sciences,295,85000,130000,Yes,Yes
+Obafemi Awolowo University,Osun,South West,Federal University,Dentistry,Medical Sciences,290,80000,120000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Dentistry,Medical Sciences,270,70000,110000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Dentistry,Medical Sciences,280,75000,115000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Medical Laboratory Science,Medical Sciences,255,65000,95000,Yes,Yes
+University of Benin,Edo,South South,Federal University,Medical Laboratory Science,Medical Sciences,248,62000,92000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Medical Laboratory Science,Medical Sciences,240,58000,88000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Medical Laboratory Science,Medical Sciences,248,62000,92000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Public Administration,Management Sciences,190,55000,75000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Public Administration,Management Sciences,185,50000,70000,Yes,Yes
+Ahmadu Bello University,Kaduna,North West,Federal University,Public Administration,Management Sciences,175,40000,60000,Yes,Yes
+University of Abuja,FCT,North Central,Federal University,Public Administration,Management Sciences,180,48000,68000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,International Relations,Social Sciences,195,58000,78000,Yes,Yes
+Obafemi Awolowo University,Osun,South West,Federal University,International Relations,Social Sciences,190,50000,70000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,International Relations,Social Sciences,185,52000,72000,Yes,Yes
+Covenant University,Ogun,South West,Private University,International Relations,Social Sciences,195,1200000,1500000,Yes,Yes
+Baze University,FCT,North Central,Private University,International Relations,Social Sciences,180,1200000,1600000,Yes,Yes
+American University of Nigeria,Adamawa,North East,Private University,International Relations,Social Sciences,180,1500000,2000000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Urban and Regional Planning,Environmental Sciences,190,58000,78000,Yes,Yes
+Obafemi Awolowo University,Osun,South West,Federal University,Urban and Regional Planning,Environmental Sciences,185,50000,70000,Yes,Yes
+University of Nigeria Nsukka,Enugu,South East,Federal University,Urban and Regional Planning,Environmental Sciences,180,52000,72000,Yes,Yes
+Federal University of Technology Akure,Ondo,South West,Federal University,Urban and Regional Planning,Environmental Sciences,178,43000,63000,Yes,Yes
+University of Lagos,Lagos,South West,Federal University,Building,Environmental Sciences,190,58000,78000,Yes,Yes
+Federal University of Technology Akure,Ondo,South West,Federal University,Building,Environmental Sciences,178,43000,63000,Yes,Yes
+Federal University of Technology Owerri,Imo,South East,Federal University,Building,Environmental Sciences,175,40000,60000,Yes,Yes
+Federal University of Technology Minna,Niger,North Central,Federal University,Building,Environmental Sciences,172,38000,58000,Yes,Yes
