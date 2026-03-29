@@ -938,5 +938,5 @@ L.tileLayer("https://{{s}}.basemaps.cartocdn.com/dark_all/{{z}}/{{x}}/{{y}}{{r}}
     html("""<div style="text-align:center;padding:2rem 0 0.8rem;margin-top:2.5rem;border-top:1px solid rgba(255,255,255,0.05);">
 <div style="font-family:'Sora',sans-serif;font-size:0.78rem;font-weight:700;color:#60A5FA;margin-bottom:0.35rem;">SmartEdMatch</div>
 <div style="font-size:0.66rem;color:#1E293B;line-height:1.8;">AI-Driven Higher Institution Recommendation System for Nigeria<br>
-Aliyu Daniel Eshoraimeh &nbsp;·&nbsp; VUG/CSC/23/8925 &nbsp;·&nbsp; Veritas University, Abuja &nbsp;·&nbsp; 2025/2026</div>
+Aliyu Daniel Eshoraimeh &nbsp;·&nbsp; VUG/CSC/23/8935 &nbsp;·&nbsp; Veritas University, Abuja &nbsp;·&nbsp; 2025/2026</div>
 </div>""")
