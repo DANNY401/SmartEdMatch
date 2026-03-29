@@ -17,7 +17,11 @@ import string
 import random
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
-RESEND_API_KEY = "re_N25WSMJQ_HgS8zvhK94UiL5gBzDbQEeCc"   # replace with your key from resend.com
+try:
+    import streamlit as st
+    RESEND_API_KEY = st.secrets.get("RESEND_API_KEY", "YOUR_RESEND_API_KEY")
+except Exception:
+    RESEND_API_KEY = "YOUR_RESEND_API_KEY"   # replace with your key from resend.com
 SENDER_EMAIL   = "onboarding@resend.dev" # use this for testing, or your own verified domain
 SENDER_NAME    = "SmartEdMatch"
 
