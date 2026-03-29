@@ -1,6 +1,6 @@
 """
 SmartEdMatch — AI-Driven Higher Institution Recommendation System for Nigeria
-Aliyu Daniel Eshoraimeh · VUG/CSC/23/8925 · Veritas University, Abuja · 2025/2026
+Aliyu Daniel Eshoraimeh · VUG/CSC/23/8935 · Veritas University, Abuja · 2025/2026
 
 Audit fixes applied (2026-03):
   PERF  - Sentiment pre-fetched in one batch before card loop (eliminates N×HTTP calls)
