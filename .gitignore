@@ -1,7 +1,7 @@
 *.pyc
 __pycache__/
 .env
-test_*.py
+test_twitter.py
 evaluation_results.csv
 *.log
 .DS_Store
