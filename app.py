@@ -177,7 +177,7 @@ if st.session_state.page == "home":
       <div style="width:7px;height:7px;border-radius:50%;background:#10B981;box-shadow:0 0 8px rgba(16,185,129,0.8);animation:pulse-glow 2s ease-in-out infinite;"></div>
       <span style="font-size:0.7rem;font-family:'Sora',sans-serif;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#60A5FA;">Nigeria's First AI Admission Intelligence System</span>
     </div>
-    <h1 style="font-family:'Sora',sans-serif;font-size:3rem;font-weight:800;margin:0 0 0.8rem;line-height:1.1;background:linear-gradient(135deg,#FFFFFF 0%,#93C5FD 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Stop Guessing.<br>Start Matching.</h1>
+    <h1 style="font-family:'Sora',sans-serif;font-size:3rem;font-weight:800;margin:0 0 0.8rem;line-height:1.1;color:#FFFFFF;">Stop Guessing.<br><span style="color:#93C5FD;">Start Matching.</span></h1>
     <p style="font-size:1.05rem;color:#94A3B8;margin:0 0 2rem;line-height:1.7;">SmartEdMatch validates your JAMB subjects, checks NUC accreditation, estimates your admission probability, and analyses real campus sentiment — so you never waste a year or a naira on the wrong institution.</p>
   </div>
 </div>
@@ -236,7 +236,7 @@ if st.session_state.page == "home":
 elif st.session_state.page == "signup":
     html("""<div style="text-align:center;margin-bottom:2rem;">
 <div style="font-size:2.5rem;margin-bottom:0.5rem;">🎓</div>
-<div style="font-family:'Sora',sans-serif;font-size:1.8rem;font-weight:800;background:linear-gradient(135deg,#60A5FA,#22D3EE);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Create Your Account</div>
+<div style="font-family:'Sora',sans-serif;font-size:1.8rem;font-weight:800;color:#60A5FA;">Create Your Account</div>
 <div style="font-size:0.88rem;color:#334155;margin-top:0.3rem;">Join Nigerian students making smarter admission decisions</div>
 </div>""")
 
@@ -296,7 +296,7 @@ elif st.session_state.page == "verify_email":
     with col:
         html(f"""<div style="text-align:center;padding:1.5rem 0 1rem;">
 <div style="font-size:3.5rem;margin-bottom:0.8rem;">📬</div>
-<div style="font-family:'Sora',sans-serif;font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,#60A5FA,#22D3EE);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:0.4rem;">Check your email</div>
+<div style="font-family:'Sora',sans-serif;font-size:1.5rem;font-weight:800;color:#60A5FA;margin-bottom:0.4rem;">Check your email</div>
 <div style="font-size:0.9rem;color:#94A3B8;margin-bottom:0.8rem;">We sent a 6-digit code to</div>
 <div style="background:rgba(37,99,235,0.1);border:1px solid rgba(37,99,235,0.3);border-radius:10px;padding:0.7rem 1.2rem;display:inline-block;margin-bottom:1.5rem;">
 <span style="font-family:'Sora',sans-serif;font-size:0.95rem;font-weight:700;color:#60A5FA;">📧 {email_addr}</span>
@@ -352,7 +352,7 @@ elif st.session_state.page == "signin":
     with col:
         html("""<div style="text-align:center;margin-bottom:2rem;">
 <div style="font-size:2.5rem;margin-bottom:0.5rem;">👋</div>
-<div style="font-family:'Sora',sans-serif;font-size:1.8rem;font-weight:800;background:linear-gradient(135deg,#60A5FA,#22D3EE);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Welcome Back</div>
+<div style="font-family:'Sora',sans-serif;font-size:1.8rem;font-weight:800;color:#60A5FA;">Welcome Back</div>
 <div style="font-size:0.88rem;color:#334155;margin-top:0.3rem;">Sign in to your SmartEdMatch account</div>
 </div>""")
         html("""<div style="background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.07);border-radius:20px;padding:2rem;">""")
@@ -438,7 +438,7 @@ elif st.session_state.page == "onboard":
 # ═══════════════════════════════════════════════════════════════════════════════
 elif st.session_state.page == "pricing":
     html("""<div style="text-align:center;margin-bottom:2rem;">
-<div style="font-family:'Sora',sans-serif;font-size:2rem;font-weight:800;background:linear-gradient(135deg,#FFFFFF,#93C5FD);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Choose Your Plan</div>
+<div style="font-family:'Sora',sans-serif;font-size:2rem;font-weight:800;color:#FFFFFF;">Choose Your Plan</div>
 <div style="font-size:0.9rem;color:#334155;margin-top:0.4rem;">Upgrade to Pro for the full intelligence suite</div>
 </div>""")
 
@@ -481,7 +481,7 @@ elif st.session_state.page == "main":
         # Brand + user card
         html(f"""<div style="text-align:center;padding:0.8rem 0 1rem;">
 <div style="font-size:1.7rem;margin-bottom:0.3rem;">🎓</div>
-<div style="font-family:'Sora',sans-serif;font-size:1.1rem;font-weight:800;background:linear-gradient(135deg,#60A5FA,#22D3EE);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">SmartEdMatch</div>
+<div style="font-family:'Sora',sans-serif;font-size:1.1rem;font-weight:800;color:#60A5FA;">SmartEdMatch</div>
 <div style="font-size:0.6rem;color:#334155;margin-top:0.1rem;letter-spacing:0.1em;text-transform:uppercase;">AI Admission Intelligence</div>
 </div>
 <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:0.55rem 0.8rem;margin-bottom:0.6rem;display:flex;align-items:center;gap:0.55rem;">
@@ -589,7 +589,7 @@ elif st.session_state.page == "main":
 <div style="width:6px;height:6px;border-radius:50%;background:#10B981;box-shadow:0 0 6px rgba(16,185,129,0.8);animation:pulse-glow 2s ease-in-out infinite;"></div>
 <span style="font-size:0.65rem;font-family:'Sora',sans-serif;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:#60A5FA;">AI Admission Intelligence · Live</span>
 </div>
-<h1 style="font-family:'Sora',sans-serif;font-size:2rem;font-weight:800;margin:0 0 0.3rem;background:linear-gradient(135deg,#FFFFFF 0%,#93C5FD 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">SmartEdMatch</h1>
+<h1 style="font-family:'Sora',sans-serif;font-size:2rem;font-weight:800;margin:0 0 0.3rem;color:#FFFFFF;">SmartEdMatch</h1>
 <p style="font-size:0.88rem;color:#94A3B8;margin:0;line-height:1.6;">Nigeria's AI Admission Advisor — JAMB validation · NUC accreditation · Probability scoring · Campus intelligence</p>
 </div>
 </div>""")
@@ -936,7 +936,7 @@ L.tileLayer("https://{{s}}.basemaps.cartocdn.com/dark_all/{{z}}/{{x}}/{{y}}{{r}}
 
     # ── Footer ────────────────────────────────────────────────────────────────
     html("""<div style="text-align:center;padding:2rem 0 0.8rem;margin-top:2.5rem;border-top:1px solid rgba(255,255,255,0.05);">
-<div style="font-family:'Sora',sans-serif;font-size:0.78rem;font-weight:700;background:linear-gradient(135deg,#60A5FA,#22D3EE);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:0.35rem;">SmartEdMatch</div>
+<div style="font-family:'Sora',sans-serif;font-size:0.78rem;font-weight:700;color:#60A5FA;margin-bottom:0.35rem;">SmartEdMatch</div>
 <div style="font-size:0.66rem;color:#1E293B;line-height:1.8;">AI-Driven Higher Institution Recommendation System for Nigeria<br>
 Aliyu Daniel Eshoraimeh &nbsp;·&nbsp; VUG/CSC/23/8925 &nbsp;·&nbsp; Veritas University, Abuja &nbsp;·&nbsp; 2025/2026</div>
 </div>""")
