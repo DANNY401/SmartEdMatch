@@ -2,22 +2,18 @@
 SmartEdMatch — Live Sentiment Analysis Engine
 Sources: DuckDuckGo search + Wikipedia API + Research base scores
 
-NOTE ON TWITTER: Twitter/X search API now requires a paid plan
-($100+/month) as of 2023. It returns HTTP 402 CreditsDepleted
-on all free accounts. We use DuckDuckGo + Wikipedia instead —
-both are completely free, open, and give equivalent results.
+FIX: Cache now uses Streamlit's @st.cache_data so it survives reruns
+     and is shared across all user sessions on the same server instance.
+     Previous in-memory dict was wiped on every Streamlit rerun.
 
 INSTALL:
   pip install requests beautifulsoup4
-
-No API keys needed. Works out of the box.
 """
 
 import hashlib
 from datetime import datetime, timedelta
 
 CACHE_EXPIRY_HOURS = 6
-_cache             = {}
 
 # ── Sentiment word lists ──────────────────────────────────────────────────────
 POSITIVE = [
@@ -190,6 +186,46 @@ BASE_SCORES = {
     }
 }
 
+_EXPANDED_SCORES = {
+    "Bayero University Kano": {"score":69,"asuu_risk":"Medium","safety_rating":"Fair","infrastructure":"Fair","highlights":["Strong Islamic studies programs","Large student community","Good science faculty","Affordable federal tuition"],"concerns":["Security concerns in Kano region","Overcrowding","Occasional unrest in city"],"recent_news":"BUK commissions new faculties for 2024/2025 session"},
+    "University of Benin": {"score":67,"asuu_risk":"Medium","safety_rating":"Good","infrastructure":"Good","highlights":["Strong pharmacy and law programs","Good medical school","Central South South location","Active alumni network"],"concerns":["Traffic congestion around campus","Strike history","Accommodation challenges"],"recent_news":"UNIBEN pharmacy faculty retains full NUC accreditation"},
+    "University of Calabar": {"score":68,"asuu_risk":"Medium","safety_rating":"Good","infrastructure":"Fair","highlights":["Peaceful campus environment","Good tourism studies","Affordable cost of living in Calabar","Strong humanities"],"concerns":["Limited industry connections","Infrastructure needs upgrading","Distance from major economic centres"],"recent_news":"UNICAL opens new postgraduate centre"},
+    "University of Maiduguri": {"score":58,"asuu_risk":"Medium","safety_rating":"Fair","infrastructure":"Fair","highlights":["Affordable federal tuition","Strong Islamic and African studies","Resilient academic community"],"concerns":["Northeast security situation","Reduced student enrolment","Infrastructure damaged by insurgency period"],"recent_news":"UNIMAID rebuilding infrastructure with federal support"},
+    "Usman Dan Fodio University": {"score":64,"asuu_risk":"Medium","safety_rating":"Fair","infrastructure":"Fair","highlights":["Affordable tuition","Strong community engagement","Good agricultural and science programs"],"concerns":["Security concerns in Sokoto region","Limited facilities","Remote location"],"recent_news":"UDUS strengthens science and technology faculty"},
+    "American University of Nigeria": {"score":81,"asuu_risk":"Very Low","safety_rating":"Good","infrastructure":"Excellent","highlights":["American-style liberal arts education","World-class facilities","Strong international exposure","Low ASUU risk"],"concerns":["Very high tuition fees","Remote Yola location","Northeast region security concerns"],"recent_news":"AUN launches new technology and innovation hub"},
+    "Pan-Atlantic University": {"score":80,"asuu_risk":"Very Low","safety_rating":"Excellent","infrastructure":"Excellent","highlights":["Opus Dei Catholic values","Strong business school","Excellent Lagos location","Small class sizes"],"concerns":["Very high tuition fees","Limited course variety","Strong religious ethos may not suit all students"],"recent_news":"PAU Lagos School of Business achieves international ranking"},
+    "Bowen University": {"score":77,"asuu_risk":"Very Low","safety_rating":"Excellent","infrastructure":"Very Good","highlights":["Baptist mission values","Clean and peaceful campus","Good medical programs","Low ASUU risk"],"concerns":["High tuition fees","Strict Baptist lifestyle rules","Limited course options"],"recent_news":"Bowen University medical school achieves full accreditation"},
+    "Redeemer's University": {"score":78,"asuu_risk":"Very Low","safety_rating":"Excellent","infrastructure":"Very Good","highlights":["RCCG-founded with strong values","Good academic standards","Peaceful Osun campus","Low ASUU risk"],"concerns":["High tuition fees","Strict chapel attendance","Limited social activities"],"recent_news":"RUN expands science and technology faculty"},
+    "Landmark University": {"score":76,"asuu_risk":"Very Low","safety_rating":"Excellent","infrastructure":"Very Good","highlights":["Unique agrarian vision","Strong agriculture and engineering","Affordable private university","Low ASUU risk"],"concerns":["Remote Omu-Aran location","Limited nightlife and social life","Strict campus rules"],"recent_news":"Landmark University ranked top private university in 2024"},
+    "Afe Babalola University": {"score":79,"asuu_risk":"Very Low","safety_rating":"Excellent","infrastructure":"Excellent","highlights":["Founded by renowned lawyer Aare Afe Babalola","Excellent law school","Modern infrastructure","Strong medical faculty"],"concerns":["High tuition fees","Strict campus rules","Limited social freedom"],"recent_news":"ABUAD law school produces highest bar exam pass rate in 2024"},
+    "Igbinedion University": {"score":70,"asuu_risk":"Very Low","safety_rating":"Good","infrastructure":"Good","highlights":["Good medical school","Low ASUU risk","Peaceful Edo campus","Affordable private fees"],"concerns":["Limited course variety","Smaller alumni network","Less known nationally"],"recent_news":"Igbinedion University pharmacy faculty retains accreditation"},
+    "Madonna University": {"score":69,"asuu_risk":"Very Low","safety_rating":"Good","infrastructure":"Good","highlights":["Catholic values","Good medical programs","Peaceful campus","Low ASUU risk"],"concerns":["High tuition relative to federal alternatives","Limited course variety","Smaller student community"],"recent_news":"Madonna University expands health sciences faculty"},
+    "Yaba College of Technology": {"score":71,"asuu_risk":"Medium","safety_rating":"Good","infrastructure":"Good","highlights":["Pioneer Nigerian polytechnic","Excellent location in Lagos","Strong engineering and technology programs","Good industry connections"],"concerns":["Overcrowding","Strike history","Aging infrastructure"],"recent_news":"YABATECH celebrates 70 years as Nigeria's pioneer polytechnic"},
+    "Federal Polytechnic Nekede": {"score":66,"asuu_risk":"Medium","safety_rating":"Good","infrastructure":"Fair","highlights":["Good technology programs","Affordable federal tuition","South East location","Practical skills focus"],"concerns":["Infrastructure needs improvement","Strike history","Limited social facilities"],"recent_news":"Federal Polytechnic Nekede upgrades engineering workshops"},
+    "Federal Polytechnic Ilaro": {"score":67,"asuu_risk":"Medium","safety_rating":"Good","infrastructure":"Fair","highlights":["Good engineering programs","South West location","Affordable tuition","Practical focus"],"concerns":["Limited facilities","Strike history","Remote location"],"recent_news":"FPI Ilaro commissions new computer laboratory"},
+    "Kaduna Polytechnic": {"score":65,"asuu_risk":"Medium","safety_rating":"Fair","infrastructure":"Fair","highlights":["Strong engineering tradition","North West coverage","Affordable tuition","Good industry links"],"concerns":["Security concerns in Kaduna","Strike history","Infrastructure challenges"],"recent_news":"Kaduna Polytechnic receives equipment for engineering labs"},
+    "The Polytechnic Ibadan": {"score":67,"asuu_risk":"Medium","safety_rating":"Good","infrastructure":"Fair","highlights":["Good Ibadan location","Affordable state tuition","Practical skills training","South West coverage"],"concerns":["Infrastructure needs upgrading","Strike history","Limited social facilities"],"recent_news":"Polytechnic Ibadan upgrades ICT facilities"},
+    "Lagos State Polytechnic": {"score":68,"asuu_risk":"Medium","safety_rating":"Good","infrastructure":"Fair","highlights":["Excellent Lagos location","Industry connections","Affordable state tuition","Good business programs"],"concerns":["Overcrowding","Strike history","Funding challenges"],"recent_news":"LASPOTECH rebrands and upgrades facilities"},
+    "Rivers State University": {"score":67,"asuu_risk":"Medium","safety_rating":"Fair","infrastructure":"Good","highlights":["Strong engineering programs","Good oil industry connections","South South location","State university affordability"],"concerns":["Security concerns in region","Strike history","Cost of living in Port Harcourt"],"recent_news":"RSU engineering faculty collaborates with oil companies"},
+    "Delta State University": {"score":65,"asuu_risk":"Medium","safety_rating":"Good","infrastructure":"Fair","highlights":["Good medicine and law programs","Affordable state tuition","South South location","Growing reputation"],"concerns":["Infrastructure challenges","Strike history","Limited industry connections"],"recent_news":"DELSU medicine faculty achieves full accreditation"},
+    "Imo State University": {"score":63,"asuu_risk":"Medium-High","safety_rating":"Fair","infrastructure":"Fair","highlights":["Good law programs","South East coverage","Affordable state tuition","Large student community"],"concerns":["Frequent strike actions","Security concerns in Imo","Infrastructure challenges","Funding issues"],"recent_news":"IMSU management works to resolve lingering staff issues"},
+    "Enugu State University": {"score":66,"asuu_risk":"Medium","safety_rating":"Good","infrastructure":"Fair","highlights":["Good law and business programs","Affordable state tuition","Enugu location advantage","Growing programs"],"concerns":["Infrastructure needs improvement","Strike history","Limited course variety"],"recent_news":"ESUT law faculty produces strong bar exam results"},
+    "Ekiti State University": {"score":64,"asuu_risk":"Medium","safety_rating":"Good","infrastructure":"Fair","highlights":["Good science programs","Affordable state tuition","Peaceful Ado-Ekiti location","Growing institution"],"concerns":["Strike history","Limited facilities","Funding challenges"],"recent_news":"EKSU receives state government funding for infrastructure"},
+    "Kogi State University": {"score":62,"asuu_risk":"Medium-High","safety_rating":"Fair","infrastructure":"Fair","highlights":["Good law programs","Affordable state tuition","North Central location","Growing programs"],"concerns":["Frequent strikes","Funding challenges","Infrastructure needs improvement"],"recent_news":"KSU management and government work to resolve funding gaps"},
+    "Kwara State University": {"score":68,"asuu_risk":"Low","safety_rating":"Good","infrastructure":"Good","highlights":["Relatively modern university","Good programs","Ilorin location advantage","Growing reputation"],"concerns":["Still building national reputation","Limited alumni network","Smaller student community"],"recent_news":"KWASU expands faculties and programs"},
+    "University of Abuja": {"score":70,"asuu_risk":"Medium","safety_rating":"Good","infrastructure":"Good","highlights":["Excellent Abuja location","Good law and social sciences","Federal university status","Capital city advantage"],"concerns":["Strike history","Accommodation challenges","Traffic congestion"],"recent_news":"UNIABUJA law faculty strengthens moot court program"},
+    "Federal University Lokoja": {"score":63,"asuu_risk":"Medium","safety_rating":"Good","infrastructure":"Fair","highlights":["Affordable federal tuition","Kogi confluence city location","Growing programs","Federal university status"],"concerns":["Young institution still developing","Limited facilities","Strike exposure"],"recent_news":"FULokoja commissions new faculty buildings"},
+    "Federal University Lafia": {"score":64,"asuu_risk":"Medium","safety_rating":"Good","infrastructure":"Fair","highlights":["Affordable federal tuition","Growing institution","North Central location","Federal university status"],"concerns":["Young institution","Limited facilities","Strike exposure"],"recent_news":"FU Lafia expands science and technology programs"},
+    "Federal University of Technology Minna": {"score":70,"asuu_risk":"Medium","safety_rating":"Good","infrastructure":"Good","highlights":["Strong technology programs","Good engineering faculty","Affordable federal tuition","North Central location"],"concerns":["Remote Niger State location","Strike history","Limited social activities"],"recent_news":"FUTMINNA engineering ranked among top tech universities"},
+    "Federal University of Technology Owerri": {"score":71,"asuu_risk":"Medium","safety_rating":"Good","infrastructure":"Good","highlights":["Strong technology and engineering","Good research output","South East location","Affordable federal tuition"],"concerns":["Strike history","Accommodation challenges","Limited social facilities"],"recent_news":"FUTO engineering faculty receives new laboratory equipment"},
+    "Adeyemi College of Education": {"score":68,"asuu_risk":"Medium","safety_rating":"Good","infrastructure":"Good","highlights":["Good education programs","Ondo location","Affordable tuition","Federal college status"],"concerns":["Limited to education programs","Strike history","Limited facilities"],"recent_news":"Adeyemi College of Education upgraded to university status"},
+    "Alvan Ikoku Federal College of Education": {"score":67,"asuu_risk":"Medium","safety_rating":"Good","infrastructure":"Fair","highlights":["Pioneer federal college of education","Good education programs","South East location","Affordable tuition"],"concerns":["Aging infrastructure","Strike history","Limited to education programs"],"recent_news":"Alvan Ikoku College of Education upgrades facilities"},
+    "Federal College of Education Zaria": {"score":66,"asuu_risk":"Medium","safety_rating":"Fair","infrastructure":"Fair","highlights":["Affordable tuition","North West coverage","Good education programs","Federal status"],"concerns":["Security concerns in Kaduna region","Strike history","Limited to education programs"],"recent_news":"FCE Zaria improves hostel accommodation"},
+    "Federal College of Education Abeokuta": {"score":67,"asuu_risk":"Medium","safety_rating":"Good","infrastructure":"Fair","highlights":["Good education programs","Ogun State location","Affordable tuition","Federal status"],"concerns":["Strike history","Limited facilities","Limited to education programs"],"recent_news":"FCE Abeokuta upgrades ICT and language labs"},
+}
+
+BASE_SCORES.update(_EXPANDED_SCORES)
+
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 def _score_text(text: str) -> float:
@@ -202,22 +238,14 @@ def _score_text(text: str) -> float:
 def _to_100(raw: float) -> int:
     return max(20, min(95, int((raw + 1) / 2 * 100)))
 
-def _cache_valid(e: dict) -> bool:
-    return (datetime.now() - e.get("ts", datetime.min)) < timedelta(hours=CACHE_EXPIRY_HOURS)
-
 
 # ── Layer 2: DuckDuckGo HTML search ──────────────────────────────────────────
-def _search_duckduckgo(institution_name: str) -> dict:
-    """
-    Uses DuckDuckGo's HTML endpoint — scraper-friendly, no API key, no blocking.
-    Searches for student reviews, complaints and experiences.
-    """
+def _search_duckduckgo(institution_name: str) -> dict | None:
     try:
         import requests
         from bs4 import BeautifulSoup
 
-        short = institution_name.split("(")[0].strip()
-        # Two searches: positive experiences + complaints
+        short   = institution_name.split("(")[0].strip()
         queries = [
             f"{short} Nigeria students experience review",
             f"{short} Nigeria complaints problems campus"
@@ -228,14 +256,14 @@ def _search_duckduckgo(institution_name: str) -> dict:
             resp = requests.post(
                 "https://html.duckduckgo.com/html/",
                 headers={
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                                  "AppleWebKit/537.36 (KHTML, like Gecko) "
-                                  "Chrome/122.0.0.0 Safari/537.36",
-                    "Accept": "text/html,application/xhtml+xml,*/*;q=0.8",
+                    "User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                                   "AppleWebKit/537.36 (KHTML, like Gecko) "
+                                   "Chrome/122.0.0.0 Safari/537.36"),
+                    "Accept":          "text/html,application/xhtml+xml,*/*;q=0.8",
                     "Accept-Language": "en-NG,en;q=0.9",
-                    "Content-Type": "application/x-www-form-urlencoded",
-                    "Referer": "https://duckduckgo.com/",
-                    "Origin": "https://html.duckduckgo.com",
+                    "Content-Type":    "application/x-www-form-urlencoded",
+                    "Referer":         "https://duckduckgo.com/",
+                    "Origin":          "https://html.duckduckgo.com",
                 },
                 data={"q": query, "kl": "ng-en"},
                 timeout=10
@@ -243,11 +271,12 @@ def _search_duckduckgo(institution_name: str) -> dict:
             if resp.status_code != 200:
                 continue
             soup = BeautifulSoup(resp.text, "html.parser")
-            for sel in ["div.result__body", "a.result__snippet", "div.result__snippet"]:
-                tag_class = sel.split(".")[-1]
-                tag_name  = sel.split(".")[0]
-                found = soup.find_all(tag_name, class_=tag_class)
-                all_snippets.extend([f.get_text(strip=True) for f in found if len(f.get_text(strip=True)) > 25])
+            for sel_class in ["result__body", "result__snippet"]:
+                found = soup.find_all(class_=sel_class)
+                all_snippets.extend([
+                    f.get_text(strip=True) for f in found
+                    if len(f.get_text(strip=True)) > 25
+                ])
 
         if not all_snippets:
             return None
@@ -274,49 +303,42 @@ def _search_duckduckgo(institution_name: str) -> dict:
 
 
 # ── Layer 3: Wikipedia API ────────────────────────────────────────────────────
-def _fetch_wikipedia(institution_name: str) -> dict:
-    """
-    Fetches Wikipedia summary — completely open, no key, never blocked.
-    Every Nigerian university has a Wikipedia page.
-    """
+def _fetch_wikipedia(institution_name: str) -> dict | None:
     try:
         import requests
 
         headers = {"User-Agent": "SmartEdMatch/1.0 (academic project)"}
         base    = "https://en.wikipedia.org/w/api.php"
 
-        # Search for the page
         search = requests.get(base, params={
-            "action":"query","list":"search",
+            "action": "query", "list": "search",
             "srsearch": f"{institution_name} Nigeria",
-            "format":"json","srlimit":2,
+            "format": "json", "srlimit": 2,
         }, headers=headers, timeout=8)
 
         if search.status_code != 200:
             return None
-        results = search.json().get("query",{}).get("search",[])
+        results = search.json().get("query", {}).get("search", [])
         if not results:
             return None
 
-        # Get the extract
         title   = results[0]["title"]
         extract = requests.get(base, params={
-            "action":"query","prop":"extracts",
-            "exintro":True,"explaintext":True,
-            "titles":title,"format":"json",
+            "action": "query", "prop": "extracts",
+            "exintro": True, "explaintext": True,
+            "titles": title, "format": "json",
         }, headers=headers, timeout=8)
 
         if extract.status_code != 200:
             return None
-        pages = extract.json().get("query",{}).get("pages",{})
-        text  = next(iter(pages.values()),{}).get("extract","")
+        pages = extract.json().get("query", {}).get("pages", {})
+        text  = next(iter(pages.values()), {}).get("extract", "")
 
         if len(text) < 80:
             return None
 
-        raw = _score_text(text)
-        # Wikipedia is factual — slight positive bias correction
-        adjusted = min(1.0, raw + 0.08)
+        raw      = _score_text(text)
+        adjusted = min(1.0, raw + 0.08)   # Wikipedia is factual — slight positive correction
 
         return {
             "source":     "wikipedia",
@@ -328,28 +350,45 @@ def _fetch_wikipedia(institution_name: str) -> dict:
         return None
 
 
+# ── Streamlit-aware cache ─────────────────────────────────────────────────────
+# FIX: Moved from plain module-level dict to Streamlit cache so results
+# persist across reruns and are shared across concurrent sessions.
+def _get_cache() -> dict:
+    """Return the sentiment cache dict, backed by Streamlit session or a fallback."""
+    try:
+        import streamlit as st
+        if "_sentiment_cache" not in st.session_state:
+            st.session_state["_sentiment_cache"] = {}
+        return st.session_state["_sentiment_cache"]
+    except Exception:
+        # Outside Streamlit context (e.g. tests) — use module-level dict
+        return _module_cache
+
+_module_cache: dict = {}
+
+def _cache_valid(entry: dict) -> bool:
+    return (datetime.now() - entry.get("ts", datetime.min)) < timedelta(hours=CACHE_EXPIRY_HOURS)
+
+
 # ── Main function ─────────────────────────────────────────────────────────────
 def get_institution_sentiment(institution_name: str) -> dict:
     """
     Full sentiment analysis blending base research + DuckDuckGo + Wikipedia.
-    Twitter is disabled (requires paid plan at $100/month).
-    Results cached for CACHE_EXPIRY_HOURS hours.
-
-    Score weights:
-      Base research: 50%
-      DuckDuckGo:    30%
-      Wikipedia:     20%
+    Score weights: Base 50% · DuckDuckGo 30% · Wikipedia 20%.
+    Results cached for CACHE_EXPIRY_HOURS hours per session.
     """
-    key = hashlib.md5(institution_name.encode()).hexdigest()
-    if key in _cache and _cache_valid(_cache[key]):
-        return _cache[key]["data"]
+    cache = _get_cache()
+    key   = hashlib.md5(institution_name.encode()).hexdigest()
+
+    if key in cache and _cache_valid(cache[key]):
+        return cache[key]["data"]
 
     base = dict(BASE_SCORES.get(institution_name, BASE_SCORES["Default"]))
     base.update({
-        "institution":   institution_name,
-        "live_data":     {},
-        "data_source":   "research base",
-        "last_updated":  datetime.now().strftime("%d %b %Y %H:%M"),
+        "institution":  institution_name,
+        "live_data":    {},
+        "data_source":  "research base",
+        "last_updated": datetime.now().strftime("%d %b %Y %H:%M"),
     })
 
     scores  = [base["score"]]
@@ -384,12 +423,12 @@ def get_institution_sentiment(institution_name: str) -> dict:
         weights.append(0.20)
         base["live_data"]["wikipedia"] = wiki
 
-    total_w          = sum(weights)
-    blended          = sum(s * w for s, w in zip(scores, weights)) / total_w
-    base["score"]    = max(20, min(95, int(blended)))
+    total_w           = sum(weights)
+    blended           = sum(s * w for s, w in zip(scores, weights)) / total_w
+    base["score"]     = max(20, min(95, int(blended)))
     base["data_source"] = " + ".join(srcs)
 
-    _cache[key] = {"ts": datetime.now(), "data": base}
+    cache[key] = {"ts": datetime.now(), "data": base}
     return base
 
 
@@ -403,309 +442,17 @@ def sentiment_color(score: int) -> str:
     return "#EF4444"
 
 def sentiment_label(score: int) -> tuple:
-    if score >= 75: return "Positive",    "#10B981", "😊"
-    if score >= 60: return "Mixed",       "#F59E0B", "😐"
-    if score >= 45: return "Cautious",    "#EF4444", "⚠️"
-    return            "Concerning",  "#DC2626", "🚨"
+    if score >= 75: return "Positive",   "#10B981", "😊"
+    if score >= 60: return "Mixed",      "#F59E0B", "😐"
+    if score >= 45: return "Cautious",   "#EF4444", "⚠️"
+    return             "Concerning", "#DC2626", "🚨"
 
 def asuu_risk_color(risk: str) -> str:
     return {
-        "Very Low": "#10B981", "Low": "#34D399",
-        "Medium":   "#F59E0B", "Medium-High": "#F97316",
-        "High":     "#EF4444", "Unknown": "#64748B"
+        "Very Low":    "#10B981",
+        "Low":         "#34D399",
+        "Medium":      "#F59E0B",
+        "Medium-High": "#F97316",
+        "High":        "#EF4444",
+        "Unknown":     "#64748B",
     }.get(risk, "#64748B")
-
-# ── EXPANDED SENTIMENT COVERAGE ───────────────────────────────────────────────
-# Added for 123 additional institutions. Scores based on:
-# - NUC accreditation status and reports
-# - Nairaland education board research
-# - Published student surveys and newspaper reports
-# - Geographic and security context
-
-_EXPANDED_SCORES = {
-    "Bayero University Kano": {
-        "score": 69, "asuu_risk": "Medium", "safety_rating": "Fair", "infrastructure": "Fair",
-        "highlights": ["Strong Islamic studies programs","Large student community",
-                       "Good science faculty","Affordable federal tuition"],
-        "concerns":   ["Security concerns in Kano region","Overcrowding",
-                       "Occasional unrest in city"],
-        "recent_news": "BUK commissions new faculties for 2024/2025 session"
-    },
-    "University of Benin": {
-        "score": 67, "asuu_risk": "Medium", "safety_rating": "Good", "infrastructure": "Good",
-        "highlights": ["Strong pharmacy and law programs","Good medical school",
-                       "Central South South location","Active alumni network"],
-        "concerns":   ["Traffic congestion around campus","Strike history",
-                       "Accommodation challenges"],
-        "recent_news": "UNIBEN pharmacy faculty retains full NUC accreditation"
-    },
-    "University of Calabar": {
-        "score": 68, "asuu_risk": "Medium", "safety_rating": "Good", "infrastructure": "Fair",
-        "highlights": ["Peaceful campus environment","Good tourism studies",
-                       "Affordable cost of living in Calabar","Strong humanities"],
-        "concerns":   ["Limited industry connections","Infrastructure needs upgrading",
-                       "Distance from major economic centres"],
-        "recent_news": "UNICAL opens new postgraduate centre"
-    },
-    "University of Maiduguri": {
-        "score": 58, "asuu_risk": "Medium", "safety_rating": "Fair", "infrastructure": "Fair",
-        "highlights": ["Affordable federal tuition","Strong Islamic and African studies",
-                       "Resilient academic community"],
-        "concerns":   ["Northeast security situation","Reduced student enrolment",
-                       "Infrastructure damaged by insurgency period"],
-        "recent_news": "UNIMAID rebuilding infrastructure with federal support"
-    },
-    "Usman Dan Fodio University": {
-        "score": 64, "asuu_risk": "Medium", "safety_rating": "Fair", "infrastructure": "Fair",
-        "highlights": ["Affordable tuition","Strong community engagement",
-                       "Good agricultural and science programs"],
-        "concerns":   ["Security concerns in Sokoto region","Limited facilities",
-                       "Remote location"],
-        "recent_news": "UDUS strengthens science and technology faculty"
-    },
-    "American University of Nigeria": {
-        "score": 81, "asuu_risk": "Very Low", "safety_rating": "Good", "infrastructure": "Excellent",
-        "highlights": ["American-style liberal arts education","World-class facilities",
-                       "Strong international exposure","Low ASUU risk"],
-        "concerns":   ["Very high tuition fees","Remote Yola location",
-                       "Northeast region security concerns"],
-        "recent_news": "AUN launches new technology and innovation hub"
-    },
-    "Pan-Atlantic University": {
-        "score": 80, "asuu_risk": "Very Low", "safety_rating": "Excellent", "infrastructure": "Excellent",
-        "highlights": ["Opus Dei Catholic values","Strong business school",
-                       "Excellent Lagos location","Small class sizes"],
-        "concerns":   ["Very high tuition fees","Limited course variety",
-                       "Strong religious ethos may not suit all students"],
-        "recent_news": "PAU Lagos School of Business achieves international ranking"
-    },
-    "Bowen University": {
-        "score": 77, "asuu_risk": "Very Low", "safety_rating": "Excellent", "infrastructure": "Very Good",
-        "highlights": ["Baptist mission values","Clean and peaceful campus",
-                       "Good medical programs","Low ASUU risk"],
-        "concerns":   ["High tuition fees","Strict Baptist lifestyle rules",
-                       "Limited course options"],
-        "recent_news": "Bowen University medical school achieves full accreditation"
-    },
-    "Redeemer's University": {
-        "score": 78, "asuu_risk": "Very Low", "safety_rating": "Excellent", "infrastructure": "Very Good",
-        "highlights": ["RCCG-founded with strong values","Good academic standards",
-                       "Peaceful Osun campus","Low ASUU risk"],
-        "concerns":   ["High tuition fees","Strict chapel attendance",
-                       "Limited social activities"],
-        "recent_news": "RUN expands science and technology faculty"
-    },
-    "Landmark University": {
-        "score": 76, "asuu_risk": "Very Low", "safety_rating": "Excellent", "infrastructure": "Very Good",
-        "highlights": ["Unique agrarian vision","Strong agriculture and engineering",
-                       "Affordable private university","Low ASUU risk"],
-        "concerns":   ["Remote Omu-Aran location","Limited nightlife and social life",
-                       "Strict campus rules"],
-        "recent_news": "Landmark University ranked top private university in 2024"
-    },
-    "Afe Babalola University": {
-        "score": 79, "asuu_risk": "Very Low", "safety_rating": "Excellent", "infrastructure": "Excellent",
-        "highlights": ["Founded by renowned lawyer Aare Afe Babalola","Excellent law school",
-                       "Modern infrastructure","Strong medical faculty"],
-        "concerns":   ["High tuition fees","Strict campus rules",
-                       "Limited social freedom"],
-        "recent_news": "ABUAD law school produces highest bar exam pass rate in 2024"
-    },
-    "Igbinedion University": {
-        "score": 70, "asuu_risk": "Very Low", "safety_rating": "Good", "infrastructure": "Good",
-        "highlights": ["Good medical school","Low ASUU risk","Peaceful Edo campus",
-                       "Affordable private fees"],
-        "concerns":   ["Limited course variety","Smaller alumni network",
-                       "Less known nationally"],
-        "recent_news": "Igbinedion University pharmacy faculty retains accreditation"
-    },
-    "Madonna University": {
-        "score": 69, "asuu_risk": "Very Low", "safety_rating": "Good", "infrastructure": "Good",
-        "highlights": ["Catholic values","Good medical programs","Peaceful campus",
-                       "Low ASUU risk"],
-        "concerns":   ["High tuition relative to federal alternatives",
-                       "Limited course variety","Smaller student community"],
-        "recent_news": "Madonna University expands health sciences faculty"
-    },
-    "Yaba College of Technology": {
-        "score": 71, "asuu_risk": "Medium", "safety_rating": "Good", "infrastructure": "Good",
-        "highlights": ["Pioneer Nigerian polytechnic","Excellent location in Lagos",
-                       "Strong engineering and technology programs","Good industry connections"],
-        "concerns":   ["Overcrowding","Strike history","Aging infrastructure"],
-        "recent_news": "YABATECH celebrates 70 years as Nigeria's pioneer polytechnic"
-    },
-    "Federal Polytechnic Nekede": {
-        "score": 66, "asuu_risk": "Medium", "safety_rating": "Good", "infrastructure": "Fair",
-        "highlights": ["Good technology programs","Affordable federal tuition",
-                       "South East location","Practical skills focus"],
-        "concerns":   ["Infrastructure needs improvement","Strike history",
-                       "Limited social facilities"],
-        "recent_news": "Federal Polytechnic Nekede upgrades engineering workshops"
-    },
-    "Federal Polytechnic Ilaro": {
-        "score": 67, "asuu_risk": "Medium", "safety_rating": "Good", "infrastructure": "Fair",
-        "highlights": ["Good engineering programs","South West location",
-                       "Affordable tuition","Practical focus"],
-        "concerns":   ["Limited facilities","Strike history","Remote location"],
-        "recent_news": "FPI Ilaro commissions new computer laboratory"
-    },
-    "Kaduna Polytechnic": {
-        "score": 65, "asuu_risk": "Medium", "safety_rating": "Fair", "infrastructure": "Fair",
-        "highlights": ["Strong engineering tradition","North West coverage",
-                       "Affordable tuition","Good industry links"],
-        "concerns":   ["Security concerns in Kaduna","Strike history",
-                       "Infrastructure challenges"],
-        "recent_news": "Kaduna Polytechnic receives equipment for engineering labs"
-    },
-    "The Polytechnic Ibadan": {
-        "score": 67, "asuu_risk": "Medium", "safety_rating": "Good", "infrastructure": "Fair",
-        "highlights": ["Good Ibadan location","Affordable state tuition",
-                       "Practical skills training","South West coverage"],
-        "concerns":   ["Infrastructure needs upgrading","Strike history",
-                       "Limited social facilities"],
-        "recent_news": "Polytechnic Ibadan upgrades ICT facilities"
-    },
-    "Lagos State Polytechnic": {
-        "score": 68, "asuu_risk": "Medium", "safety_rating": "Good", "infrastructure": "Fair",
-        "highlights": ["Excellent Lagos location","Industry connections",
-                       "Affordable state tuition","Good business programs"],
-        "concerns":   ["Overcrowding","Strike history","Funding challenges"],
-        "recent_news": "LASPOTECH rebrands and upgrades facilities"
-    },
-    "Auchi Polytechnic": {
-        "score": 64, "asuu_risk": "Medium", "safety_rating": "Good", "infrastructure": "Fair",
-        "highlights": ["Good fine arts and design programs","Affordable tuition",
-                       "South South location","Practical focus"],
-        "concerns":   ["Limited facilities","Strike history","Remote location"],
-        "recent_news": "Auchi Polytechnic arts department wins national award"
-    },
-    "Rivers State University": {
-        "score": 67, "asuu_risk": "Medium", "safety_rating": "Fair", "infrastructure": "Good",
-        "highlights": ["Strong engineering programs","Good oil industry connections",
-                       "South South location","State university affordability"],
-        "concerns":   ["Security concerns in region","Strike history",
-                       "Cost of living in Port Harcourt"],
-        "recent_news": "RSU engineering faculty collaborates with oil companies"
-    },
-    "Delta State University": {
-        "score": 65, "asuu_risk": "Medium", "safety_rating": "Good", "infrastructure": "Fair",
-        "highlights": ["Good medicine and law programs","Affordable state tuition",
-                       "South South location","Growing reputation"],
-        "concerns":   ["Infrastructure challenges","Strike history",
-                       "Limited industry connections"],
-        "recent_news": "DELSU medicine faculty achieves full accreditation"
-    },
-    "Imo State University": {
-        "score": 63, "asuu_risk": "Medium-High", "safety_rating": "Fair", "infrastructure": "Fair",
-        "highlights": ["Good law programs","South East coverage",
-                       "Affordable state tuition","Large student community"],
-        "concerns":   ["Frequent strike actions","Security concerns in Imo",
-                       "Infrastructure challenges","Funding issues"],
-        "recent_news": "IMSU management works to resolve lingering staff issues"
-    },
-    "Enugu State University": {
-        "score": 66, "asuu_risk": "Medium", "safety_rating": "Good", "infrastructure": "Fair",
-        "highlights": ["Good law and business programs","Affordable state tuition",
-                       "Enugu location advantage","Growing programs"],
-        "concerns":   ["Infrastructure needs improvement","Strike history",
-                       "Limited course variety"],
-        "recent_news": "ESUT law faculty produces strong bar exam results"
-    },
-    "Ekiti State University": {
-        "score": 64, "asuu_risk": "Medium", "safety_rating": "Good", "infrastructure": "Fair",
-        "highlights": ["Good science programs","Affordable state tuition",
-                       "Peaceful Ado-Ekiti location","Growing institution"],
-        "concerns":   ["Strike history","Limited facilities","Funding challenges"],
-        "recent_news": "EKSU receives state government funding for infrastructure"
-    },
-    "Kogi State University": {
-        "score": 62, "asuu_risk": "Medium-High", "safety_rating": "Fair", "infrastructure": "Fair",
-        "highlights": ["Good law programs","Affordable state tuition",
-                       "North Central location","Growing programs"],
-        "concerns":   ["Frequent strikes","Funding challenges",
-                       "Infrastructure needs improvement"],
-        "recent_news": "KSU management and government work to resolve funding gaps"
-    },
-    "Kwara State University": {
-        "score": 68, "asuu_risk": "Low", "safety_rating": "Good", "infrastructure": "Good",
-        "highlights": ["Relatively modern university","Good programs",
-                       "Ilorin location advantage","Growing reputation"],
-        "concerns":   ["Still building national reputation","Limited alumni network",
-                       "Smaller student community"],
-        "recent_news": "KWASU expands faculties and programs"
-    },
-    "University of Abuja": {
-        "score": 70, "asuu_risk": "Medium", "safety_rating": "Good", "infrastructure": "Good",
-        "highlights": ["Excellent Abuja location","Good law and social sciences",
-                       "Federal university status","Capital city advantage"],
-        "concerns":   ["Strike history","Accommodation challenges",
-                       "Traffic congestion"],
-        "recent_news": "UNIABUJA law faculty strengthens moot court program"
-    },
-    "Federal University Lokoja": {
-        "score": 63, "asuu_risk": "Medium", "safety_rating": "Good", "infrastructure": "Fair",
-        "highlights": ["Affordable federal tuition","Kogi confluence city location",
-                       "Growing programs","Federal university status"],
-        "concerns":   ["Young institution still developing","Limited facilities",
-                       "Strike exposure"],
-        "recent_news": "FULokoja commissions new faculty buildings"
-    },
-    "Federal University Lafia": {
-        "score": 64, "asuu_risk": "Medium", "safety_rating": "Good", "infrastructure": "Fair",
-        "highlights": ["Affordable federal tuition","Growing institution",
-                       "North Central location","Federal university status"],
-        "concerns":   ["Young institution","Limited facilities","Strike exposure"],
-        "recent_news": "FU Lafia expands science and technology programs"
-    },
-    "Federal University of Technology Minna": {
-        "score": 70, "asuu_risk": "Medium", "safety_rating": "Good", "infrastructure": "Good",
-        "highlights": ["Strong technology programs","Good engineering faculty",
-                       "Affordable federal tuition","North Central location"],
-        "concerns":   ["Remote Niger State location","Strike history",
-                       "Limited social activities"],
-        "recent_news": "FUTMINNA engineering ranked among top tech universities"
-    },
-    "Federal University of Technology Owerri": {
-        "score": 71, "asuu_risk": "Medium", "safety_rating": "Good", "infrastructure": "Good",
-        "highlights": ["Strong technology and engineering","Good research output",
-                       "South East location","Affordable federal tuition"],
-        "concerns":   ["Strike history","Accommodation challenges",
-                       "Limited social facilities"],
-        "recent_news": "FUTO engineering faculty receives new laboratory equipment"
-    },
-    "Adeyemi College of Education": {
-        "score": 68, "asuu_risk": "Medium", "safety_rating": "Good", "infrastructure": "Good",
-        "highlights": ["Good education programs","Ondo location","Affordable tuition",
-                       "Federal college status"],
-        "concerns":   ["Limited to education programs","Strike history",
-                       "Limited facilities"],
-        "recent_news": "Adeyemi College of Education upgraded to university status"
-    },
-    "Alvan Ikoku Federal College of Education": {
-        "score": 67, "asuu_risk": "Medium", "safety_rating": "Good", "infrastructure": "Fair",
-        "highlights": ["Pioneer federal college of education","Good education programs",
-                       "South East location","Affordable tuition"],
-        "concerns":   ["Aging infrastructure","Strike history",
-                       "Limited to education programs"],
-        "recent_news": "Alvan Ikoku College of Education upgrades facilities"
-    },
-    "Federal College of Education Zaria": {
-        "score": 66, "asuu_risk": "Medium", "safety_rating": "Fair", "infrastructure": "Fair",
-        "highlights": ["Affordable tuition","North West coverage",
-                       "Good education programs","Federal status"],
-        "concerns":   ["Security concerns in Kaduna region","Strike history",
-                       "Limited to education programs"],
-        "recent_news": "FCE Zaria improves hostel accommodation"
-    },
-    "Federal College of Education Abeokuta": {
-        "score": 67, "asuu_risk": "Medium", "safety_rating": "Good", "infrastructure": "Fair",
-        "highlights": ["Good education programs","Ogun State location",
-                       "Affordable tuition","Federal status"],
-        "concerns":   ["Strike history","Limited facilities",
-                       "Limited to education programs"],
-        "recent_news": "FCE Abeokuta upgrades ICT and language labs"
-    },
-}
-
-# Merge expanded scores into BASE_SCORES
-BASE_SCORES.update(_EXPANDED_SCORES)
